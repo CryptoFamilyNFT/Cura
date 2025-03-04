@@ -4,6 +4,7 @@ import CuraThemeProvider from './theme/ThemeProvider';
 import { createAppTheme } from './theme/theme';
 import { Box, Container } from '@mui/material';
 import { SignUp } from './components/SignUp/SignUp';
+import { Navbar } from './components/Navbar/Navbar';
 
 function App() {
   const [currentTheme, setTheme] = useState(createAppTheme('light'));
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <CuraThemeProvider theme={currentTheme}>
+      <Navbar handleTheme={handleThemeChange} />
       <Box sx={(theme) => ({
         background: theme.palette.mode === 'light' ? '#f4f7e1' : '#1e1e1e',
         height: '100vh',
