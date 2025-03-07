@@ -1,18 +1,28 @@
 /* eslint-disable no-unused-vars */
 import { Container, Typography, Box, Button } from "@mui/material";
+import WrappedTreeScene from "./3d/TreeScene";
 
 export const Hero = ({ handleTheme }) => {
     return (
 
-            <Box sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                g: 2
+        <Box sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            g: 2,
+            width: '100%',
+            height: '100%',
+        }}>
+            <div style={{
+                width: '100%',
+                height: '100%',
+                position: 'absolute',
+                top: 0,
+                lefto: 0
             }}>
-                <Typography variant="h1" color="info" align="center">Cura</Typography>
-                <Typography variant="h4" color="secondary" align="center">Your health, your way.</Typography>
-                <Button sx={{mt: 10}} variant="contained" color="secondary" onClick={(e) => handleTheme(e)}>Change Theme</Button>
-            </Box>
+            <WrappedTreeScene />
+            </div>
+            <Typography variant="h1" color="success" align="center">Cura</Typography>
+        </Box>
     );
 }
