@@ -1,0 +1,101 @@
+{
+  "User": {
+    "id": 1,
+    "name": "Mario",
+    "surname": "Rossi",
+    "image": "https://example.com/profile.jpg",
+    "email": "mario.rossi@example.com",
+    "password": "hashed_password",
+    "diary": [
+        {
+            "id": 1,
+            "title:": "Oggi come sto",
+            "content": "Lorem Ipsum etc...etc...etc...",
+            "date": 173289489
+          }
+    ],
+    "progress": [
+      {
+        "id": 101,
+        "questions": ["Qual è la capitale d'Italia?", "Quanto fa 2+2?"],
+        "answers": ["Roma", "4"],
+        "result": "Ottimo",
+        "type": "logico",
+        "history": [
+          {
+            "question": "Qual è la capitale d'Italia?",
+            "answer": "Roma"
+          },
+          {
+            "question": "Quanto fa 2+2?",
+            "answer": "4"
+          }
+        ],
+        "progress": 100
+      }
+    ],
+    "session": 5,
+    "currentSession": 1,
+    "historySessions": 4
+  },
+  "Diary": {
+    "id": 1,
+    "title:": "Oggi come sto",
+    "content": "Lorem Ipsum etc...etc...etc...",
+    "date": 173289489
+  },
+  "AI": {
+    "id": 202,
+    "user": {
+      "id": 1,
+      "name": "Mario",
+      "surname": "Rossi",
+      "image": "https://example.com/profile.jpg",
+      "email": "mario.rossi@example.com",
+      "password": "hashed_password",
+      "progress": [],
+      "session": 5,
+      "currentSession": 1,
+      "historySessions": 4
+    },
+    "history": ["Come posso migliorare la mia memoria?", "Puoi suggerirmi un quiz?"],
+    "model": "GPT-4"
+  },
+  "Quiz": {
+    "id": 101,
+    "questions": ["Qual è la capitale d'Italia?", "Quanto fa 2+2?"],
+    "answers": ["Roma", "4"],
+    "result": "Ottimo",
+    "type": "logico",
+    "history": [
+      {
+        "question": "Qual è la capitale d'Italia?",
+        "answer": "Roma"
+      },
+      {
+        "question": "Quanto fa 2+2?",
+        "answer": "4"
+      }
+    ],
+    "progress": 100
+  },
+  "Review": {
+    "id": 303,
+    "user": {
+      "id": 1,
+      "name": "Mario",
+      "surname": "Rossi",
+      "image": "https://example.com/profile.jpg",
+      "email": "mario.rossi@example.com",
+      "password": "hashed_password",
+      "progress": [],
+      "session": 5,
+      "currentSession": 1,
+      "historySessions": 4
+    },
+    "rating": 5,
+    "comment": "App molto utile e ben fatta!",
+    "date": 1728387478
+  }
+}
+

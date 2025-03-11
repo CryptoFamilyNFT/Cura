@@ -11,6 +11,7 @@ export const SignUp = () => {
             position: 'absolute'
         }}>
             <div
+            className=""
             style={{
                 position: 'relative',
                 top: 0,
