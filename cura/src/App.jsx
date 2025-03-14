@@ -19,22 +19,13 @@ function App() {
 
 
   return (
-    <CuraThemeProvider theme={currentTheme}>
+    <div>
       <Navbar handleTheme={handleThemeChange} />
-      <Box sx={(theme) => ({
-        background: theme.palette.mode === 'light' ? '#f4f7e1' : '#1e1e1e',
-        height: '100vh',
-        width: '100vw',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: 'column',
-        gap: 10
-      })}>
+      <div className='bg-amber-200 w-full h-full flex items-center content-center flex-col gap-10'>
         <SignUp/>
         <Hero handleTheme={handleThemeChange} />
-      </Box>
-    </CuraThemeProvider>
+      </div>
+    </div>
   )
 }
 
