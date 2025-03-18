@@ -23,8 +23,8 @@ const menuButton = [
 ]
 
 export const Navbar = ({ handleTheme }) => {
-    const theme = useTheme();
-
+    const theme = useTheme(); //aggiunto theme
+ 
     return (
         <div className={`fixed top-0 left-0 w-full h-12 ${theme.palette.mode === 'light' ? 'bg-transparent' : 'bg-gray-800'} z-10 flex flex-row`}>
             {/** left box side */}
