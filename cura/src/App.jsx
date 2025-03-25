@@ -5,7 +5,8 @@ import { createAppTheme } from "./theme/theme";
 import { Box } from "@mui/material";
 import { SignUp } from "./components/SignUp/SignUp";
 import { Navbar } from "./components/Navbar/Navbar";
-import { Routes } from "react-router";
+import { Route, Routes } from "react-router";
+import TeamPage from "./components/Team/TeamPage";
 
 function App() {
   const [currentTheme, setTheme] = useState(createAppTheme("light"));
@@ -36,10 +37,10 @@ function App() {
         <SignUp />
         <Hero handleTheme={handleThemeChange} />
         <Routes>
-          <Route path="Login"/>
-          <Route/>
-          <Route/>
-          <Route/>
+          <Route path="Login" />
+          <Route path="team" element={<TeamPage />} />
+          <Route />
+          <Route />
         </Routes>
       </Box>
     </CuraThemeProvider>
