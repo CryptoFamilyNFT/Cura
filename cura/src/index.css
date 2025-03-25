@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+.list{
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.list .quiz{
+    transition: .5s;
+}
+
+
+.list .quiz:hover{
+    transform: translateZ(50px);
+}
+
+.list .quiz:hover + * {
+    transform: translateZ(30px) rotatex(-30deg);
+}
+
+.list .quiz:has(+ *:hover){
+    transform: translateZ(15px) rotatex(15deg);
+}

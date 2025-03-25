@@ -6,6 +6,7 @@ import { Box } from "@mui/material";
 import { SignUp } from "./components/SignUp/SignUp";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Routes } from "react-router";
+import SezioneQuiz from "./components/Sezione-Quiz/Sezione-Quiz";
 
 function App() {
   const [currentTheme, setTheme] = useState(createAppTheme("light"));
@@ -38,7 +39,7 @@ function App() {
         <Routes>
           <Route path="Login"/>
           <Route/>
-          <Route/>
+          <Route path="/Quiz" element={<SezioneQuiz/>} />
           <Route/>
         </Routes>
       </Box>
