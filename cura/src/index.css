@@ -1,1 +1,4 @@
 @import "tailwindcss";
+:root {
+  font-family: Titan One;
+}
