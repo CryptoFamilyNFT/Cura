@@ -5,8 +5,13 @@ import { createAppTheme } from "./theme/theme";
 import { Box } from "@mui/material";
 import { SignUp } from "./components/SignUp/SignUp";
 import { Navbar } from "./components/Navbar/Navbar";
+<<<<<<< HEAD
 import { Routes } from "react-router";
 import SezioneQuiz from "./components/Sezione-Quiz/Sezione-Quiz";
+=======
+import { Route, Routes } from "react-router";
+import TeamPage from "./components/Team/TeamPage";
+>>>>>>> f9b288146ffbe7acd83c80c5c39d0a06954c4a0e
 
 function App() {
   const [currentTheme, setTheme] = useState(createAppTheme("light"));
@@ -37,10 +42,17 @@ function App() {
         <SignUp />
         <Hero handleTheme={handleThemeChange} />
         <Routes>
+<<<<<<< HEAD
           <Route path="Login"/>
           <Route/>
           <Route path="/Quiz" element={<SezioneQuiz/>} />
           <Route/>
+=======
+          <Route path="Login" />
+          <Route path="team" element={<TeamPage />} />
+          <Route />
+          <Route />
+>>>>>>> f9b288146ffbe7acd83c80c5c39d0a06954c4a0e
         </Routes>
       </Box>
     </CuraThemeProvider>
