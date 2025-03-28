@@ -1,5 +1,4 @@
 @import "tailwindcss";
-<<<<<<< HEAD
 
 .list{
     transform-style: preserve-3d;
@@ -21,8 +20,7 @@
 
 .list .quiz:has(+ *:hover){
     transform: translateZ(15px) rotatex(15deg);
-=======
+}
 :root {
   font-family: Titan One;
->>>>>>> f9b288146ffbe7acd83c80c5c39d0a06954c4a0e
 }
