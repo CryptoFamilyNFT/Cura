@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-<<<<<<< HEAD
 :root {
   font-family: Titan One;
 }
@@ -67,25 +66,3 @@
 .quiz:nth-of-type(even) h3{
   margin-left: -150px;
 }
-=======
-.list {
-  transform-style: preserve-3d;
-  transform: perspective(1000px);
-}
-
-.list .quiz {
-  transition: 0.5s;
-}
-
-.list .quiz:hover {
-  transform: translateZ(50px);
-}
-
-.list .quiz:hover + * {
-  transform: translateZ(30px) rotatex(-30deg);
-}
-
-.list .quiz:has(+ *:hover) {
-  transform: translateZ(15px) rotatex(15deg);
-}
->>>>>>> 878a5c60a5464a9a6f4fb347205fade5b76f1fe5
