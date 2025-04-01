@@ -1,5 +1,6 @@
 import SettingsContent from "./SettingsContent";
 import DiaryContent from "./DiaryContent";
+import SupportContent from "./SupportContent";
 
 const Diario = () => {
   return (
@@ -20,7 +21,9 @@ const Impostazioni = () => {
 const Supporto = () => {
   return (
     <div>
-      <h1>Supporto</h1>
+      <h1>
+        <SupportContent />
+      </h1>
     </div>
   );
 };
