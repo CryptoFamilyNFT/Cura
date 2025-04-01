@@ -9,7 +9,7 @@ config();
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  assetsInclude: ['**/*.glb', '**/*.gltf'],
+  assetsInclude: ['**/*.glb', '**/*.gltf', '**/*.PNG', '**/*.JPG', '**/*.JPGEG', '**/*.SVG'],
   define: {
     'process.env': process.env
   }
