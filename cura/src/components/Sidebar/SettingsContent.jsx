@@ -40,7 +40,7 @@ export default function Impostazioni() {
   };
 
   return (
-    <div className="flex flex-col w-130 my-32 items-center gap-5 p-10 bg-white/30">
+    <div className="flex flex-col w-full h-full shadow-md rounded-2xl items-center gap-5 p-10 bg-white/30">
       <h1 className="text-xl font-bold">Impostazioni Utente</h1>
       <div className="grid grid-cols-2 gap-10 ">
         {/* Colonna sinistra - Dettagli */}

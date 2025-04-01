@@ -1,21 +1,21 @@
-import { useState } from "react";
 import Sidebar from "./Components/Sidebar";
 import ContentProfile from "./Components/ContentProfile";
+import { useState } from "react";
 
-function App() {
-  const [content, setContent] = useState("Diario");
+export default function MainLayout() {
+  const [pageContent, setPageContent] = useState("Diario");
+
   return (
-    <div className="flex bg-gradient-to-t from-[#23687D] to-[#A1C877]">
-      <div className="p-4 w-screen h-screen">
-        <Sidebar setPageContent={setContent} />
+    <div className="flex bg-gradient-to-t from-[#23687D] to-[#A1C877] h-screen">
+      {/* Sidebar */}
+      <div className="p-3">
+        <Sidebar setPageContent={setPageContent} />
       </div>
-      <div>
-        <div className="w-150 bg-transparent">
-          <ContentProfile section={content} />
-        </div>
+
+      {/* Contenuti */}
+      <div className="flex-1 h-full p-6">
+        <ContentProfile section={pageContent} />
       </div>
     </div>
   );
 }
-
-export default App;
