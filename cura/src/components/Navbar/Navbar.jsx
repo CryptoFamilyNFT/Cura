@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
-import { useTheme } from "@mui/material";
+import { Avatar, useTheme } from "@mui/material";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-
+import logo from "../../assets/Images/mascotte_2.png";
 const menuButton = [
     {
         title: 'Home',
@@ -26,13 +26,13 @@ export const Navbar = ({ handleTheme }) => {
     const theme = useTheme(); //aggiunto theme
  
     return (
-        <div className={`fixed top-0 left-0 w-full h-12 bg-gradient-to-b from-emerald-200 to-transparent bg-opacity-50 backdrop-blur-md z-10 flex flex-row`}>
+        <div className={`fixed top-0 left-0 w-full h-12 bg-gradient-to-b from-emerald-80 to-transparent bg-opacity-70 backdrop-blur-lg z-10 flex flex-row`}>
             {/** left box side */}
             <div className="flex items-center p-2 flex-row flex-1">
-                <img src="ss" alt="cura logo" className="h-8 w-8" />
+                <img src={logo} alt="cura logo" className="h-8 w-8" />
                 <div className="border-l border-emerald-500 h-full mx-2">
                     {menuButton.map((button) => (
-                        <button className={`ml-2 border-emerald-500 border-1 text-emerald-600 font-semibold py-1 px-3 rounded`} key={button.title}>
+                        <button className={`ml-2 hover:bg-emerald-900 hover:text-emerald-50 border-emerald-500 border-1 text-emerald-600 font-semibold py-1 px-3 rounded`} key={button.title}>
                             {button.title}
                         </button>
                     ))}
@@ -50,9 +50,9 @@ export const Navbar = ({ handleTheme }) => {
                     <DarkModeIcon className={`${theme.palette.mode === "dark" ? "text-emerald-500" : "text-gray-400"}`} />
                 </div>
                 <div className="flex items-center mr-2">
-                    <img src="ss" alt="Mario Rossi" className="h-8 w-8 rounded-full bg-emerald-200 mr-2" />
-                    <button className=" bg-emerald-100 border-emerald-500 border-1 w-full text-white py-1 px-3 rounded">
-                        <span className="text-emerald-600 font-bold">Mario Rossi</span>
+                    <Avatar alt="Mario" src="/static/images/avatar/1.jpg" sx={{ width: 30, height: 30, mr: 1 }} />
+                    <button className=" bg-emerald-900  hover:bg-transparent hover:text-emerald-900 border-emerald-900 border-1 w-full text-white py-1 px-3 rounded">
+                        Mario Rossi
                     </button>
                 </div>
             </div>
