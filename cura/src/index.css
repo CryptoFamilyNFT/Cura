@@ -20,6 +20,3 @@
 .list .quiz:has(+ *:hover) {
   transform: translateZ(15px) rotatex(15deg);
 }
-:root {
-  font-family: Titan One;
-}
