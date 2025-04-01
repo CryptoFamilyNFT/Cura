@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
-.list{
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-}
-
-.list .quiz{
-    transition: .5s;
-}
-
-
-.list .quiz:hover{
-    transform: translateZ(50px);
-}
-
-.list .quiz:hover + * {
-    transform: translateZ(30px) rotatex(-30deg);
-}
-
-.list .quiz:has(+ *:hover){
-    transform: translateZ(15px) rotatex(15deg);
-}
 :root {
   font-family: Titan One;
+}
+
+::-webkit-scrollbar{
+  background-color: #F4F7E1;
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background-color:#A1C877;
+  border: 5px solid #F4F7E1;
+  border-radius: 20px;
+}
+
+.Quiz-list{
+  transform-style: preserve-3d;
+  transform:perspective(1000px);
+}
+
+.Quiz-list .quiz{
+  transition: ease-in-out .5s;
+}
+
+.quiz1 .thumb{
+  border: 17px solid #A1C877;
+  border-radius: 10px;
+}
+
+
+.Quiz-list .quiz:hover{
+  transform:scale(1.1)
+}
+
+
+
+.Quiz-list .quiz:hover .thumb{
+  transition: ease-in-out .5s;
+  transform: rotate(4deg);
+  border-width: 7px;
+  img{
+      filter: grayscale(0%);
+  }
+}
+.Quiz-list .quiz:nth-of-type(even):hover .thumb{
+  transition: .5s;
+  transform: rotate(4deg);
+  border-width: 7px;
+  img{
+      filter: grayscale(0%);
+  }
+}
+
+
+.quiz:nth-of-type(even){
+  text-align: right;
+}
+
+.quiz:nth-of-type(even) .thumb{
+  margin-right: -5em;
+  transform: rotate(10deg);
+  float: right;
+}
+
+.quiz:nth-of-type(even) h3{
+  margin-left: -150px;
 }

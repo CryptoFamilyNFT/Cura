@@ -2,12 +2,37 @@ import QuizCard from "../Card-Quiz/Quiz-Card";
 
 export default function CategorieQuiz() {
   return (
-    <div className=" grid-cols-1 bg-[#A1C877] rounded-2xl p-0.5 col-span-2 pt-10 overflow-auto list">
-      <QuizCard title="VITA LAVORO" hand={hands} className="quiz"/>
-      <QuizCard title="SONNO E RECUPERO" hand={hands} className="quiz"/>
-      <QuizCard title="LIVELLO DI STRESS" hand={hands} className="quiz"/>
-      <QuizCard title="UMORE ED EMOZIONI" hand={hands} className="quiz"/>
-      <QuizCard title="AUTOCONSAPEVOLEZZA" hand={hands} className="quiz"/>
+    <div className="bg-[#A1C877] w-auto h-screen pl-20 pr-20 pt-10 col-span-2 overflow-auto Quiz-list">
+      <QuizCard
+        par={"VITA LAVORO"}
+        desc={
+          "Rispondi a queste domande per scoprire come bilanci il tuo tempo tra lavoro, famiglia e benessere. Il risultato ti aiuterà a capire se il tuo equilibrio vita-lavoro è ottimale o se ci sono aree da migliorare."
+        }
+      />
+      <QuizCard
+        par={"SONNO"}
+        desc={
+          "Rispondi a queste domande per scoprire quanto il tuo sonno influisce sul tuo benessere. Il risultato ti aiuterà a capire se stai dormendo a sufficienza e se ci sono abitudini da migliorare per dormire meglio."
+        }
+      />
+      <QuizCard
+        par={"LIVELLO DI STRESS"}
+        desc={
+          "Rispondi a queste domande per valutare il tuo livello di stress. Il risultato ti aiuterà a capire quanto lo stress influenzi la tua vita quotidiana e a individuare eventuali aree in cui puoi migliorare il tuo benessere."
+        }
+      />
+      <QuizCard
+        par={"UMORE"}
+        desc={
+          "Rispondi a queste domande per valutare il tuo umore. Il risultato ti aiuterà a capire come ti senti emotivamente e a individuare eventuali aspetti della tua vita che potrebbero influenzare il tuo stato d’animo."
+        }
+      />
+      <QuizCard
+        par={"AUTOCONSAPEVOLEZZA"}
+        desc={
+          "Rispondi a queste domande per esplorare il tuo livello di autoconsapevolezza. Il risultato ti aiuterà a capire quanto sei in sintonia con te stesso e a individuare aree in cui puoi crescere per migliorare la tua consapevolezza emotiva e mentale."
+        }
+      />
     </div>
   );
 }
