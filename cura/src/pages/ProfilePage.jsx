@@ -1,5 +1,5 @@
-import Sidebar from "./Components/Sidebar";
-import ContentProfile from "./Components/ContentProfile";
+import Sidebar from "../components/Sidebar/Sidebar";
+import ContentProfile from "../components/Sidebar/ContentProfile";
 import { useState } from "react";
 
 export default function MainLayout() {
