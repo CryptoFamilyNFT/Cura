@@ -1,9 +1,14 @@
-export default function QuizCard({ title, hand }) {
-  return (
-    <div className=" relative z-10 flex justify-between w-auto h-30 m-2 p-3 bg-white/30 rounded-2xl quiz">
-      <img src={hand} alt="" />
-      <h1 className=" pt-10  ">{title}</h1>
-      <button type="button" className="flex justify-center w-50 h-fit bg-[#23687D] rounded-2xl ">JOIN QUIZ</button>
-    </div>
-  );
+export default function QuizCard({ emoji, par, desc}){
+  return(
+      <div className=" w-auto h-auto m-10 p-3 bg-white/30 rounded-2xl quiz ">
+          <div className=" float-left w-30 -rotate-4 -ml-20 thumb ">
+              <img src={emoji} alt="" className=" grayscale-100" />
+          </div>
+          <div className="quiz-description">
+              <h3 className=" inline absolute  text-2xl rounded-xl bg-[#A1C877] text-[#F4F7E1] p-0.5 pl-3 pr-3 -mt-9 quiz-title ">{par}</h3>
+              <p className=" p-7 text-[#23687D] pl-20 pr-20">{desc}</p>
+              <button type="button" className=" w-40 h-7 bg-[#23687D] text-[#F4F7E1] rounded-2xl"> JOIN QUIZ </button>
+          </div>
+      </div>
+  )
 }
