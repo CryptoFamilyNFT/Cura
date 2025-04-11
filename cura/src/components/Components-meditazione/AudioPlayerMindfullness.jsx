@@ -73,7 +73,9 @@ export default function AudioPlayerMindfullness({ tracks }) {
   return (
     <div className="flex justify-center items-center h-screen">
       <div>
-        {<ScenaMeditazione modelPath="./meditazioneMindfullness.glb" />}
+        {
+          <ScenaMeditazione modelPath="https://drive.google.com/uc?export=download&id=1Ufr7kmWpmm8uWyCkUhNDGTJOxz8UeTeq" />
+        }
       </div>{" "}
       {/* qui passo modello mindfullness */}
       <div className="w-1/3 flex-col justify-end items-center">

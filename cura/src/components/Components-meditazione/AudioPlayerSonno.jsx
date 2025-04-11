@@ -73,7 +73,9 @@ export default function AudioPlayerSonno({ tracks }) {
   return (
     <div className="flex justify-start items-start mt-20 max-h-screen w-fit">
       <div className="flex justify-start items-start">
-        {<ScenaMeditazione modelPath="./meditazioneSonno.glb" />}
+        {
+          <ScenaMeditazione modelPath="https://drive.google.com/uc?export=download&id=1txevq5Q4TDAK9IN0YMbRewRzOIs0lzO8" />
+        }
       </div>{" "}
       {/* qui passo la scena meditazione sonno  */}
       <div className="w-1/3 flex-col">

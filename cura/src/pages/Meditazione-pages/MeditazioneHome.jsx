@@ -6,7 +6,7 @@ export default function MeditazioneHome() {
   const navigate = useNavigate();
   return (
     <div className="flex flex-col justify-center items-center bg-gradient-to-b from-[#205f72] to-[#A1C877] pt-30">
-      <ScenaMeditazione modelPath="./meditazioneVuota.glb" />
+      <ScenaMeditazione modelPath="https://drive.google.com/uc?export=download&id=1H7rqHKduXVbhoB_u_xBJQGQHf3hRcUKH" />
 
       {/* contenitore per i bottoni */}
       <div className=" absolute flex flex-col gap-5 space-x-5  pt-50">
