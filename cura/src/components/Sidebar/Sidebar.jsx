@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { ContactSupport, EditNote } from "@mui/icons-material";
 import SettingsIcon from "@mui/icons-material/Settings";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import SidebarButton from "./SidebarButton";
 
 export default function Sidebar({
   setPageContent,
   user = {
     username: "Mario Rossi",
-    img: "src/assets/mascotte_2.PNG",
+    img: "../../../public/Images/mascotte_2.PNG",
   },
 }) {
   const [activeButton, setActiveButton] = useState("Diario");
@@ -16,7 +16,7 @@ export default function Sidebar({
 
   const [userData, setUserData] = useState({
     username: "Mario Rossi",
-    img: "src/assets/mascotte_2.PNG",
+    img: "../../../public/Images/mascotte_2.PNG",
   });
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export default function Sidebar({
 
     setUserData({
       username: fetchedUserData.username,
-      img: fetchedUserData.img || "src/assets/mascotte_2.PNG",
+      img: fetchedUserData.img || "../../../public/Images/mascotte_2.PNG",
     });
   }, []);
 
@@ -42,7 +42,7 @@ export default function Sidebar({
       <div className="flex flex-col items-center justify-center p-10">
         <img
           className="w-15 rounded-full"
-          src={userData.img || "src/assets/mascotte_2.PNG"}
+          src={userData.img || "../../../public/Images/mascotte_2.PNG"}
           alt="user_propic"
         />
         <span className="font-bold">USER PROFILE</span>
