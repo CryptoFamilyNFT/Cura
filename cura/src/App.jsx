@@ -6,6 +6,7 @@ import HomeReview from "./components/Review/HomeReview"
 import QuizPage from "./pages/QuizPage";
 import FeedbackPage from "./pages/FeedbackPage";
 import Page1 from "./pages/landing-page/Page1"
+import Page2 from "./pages/landing-page/Page2"
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/Review" element={<HomeReview />} />
         <Route path="/Feedback" element={<FeedbackPage />} />
         <Route path="/Page1" element={<Page1 />} />
+        <Route path="/Page2" element={<Page2 />} />
       </Routes>
     </>
   );
