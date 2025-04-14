@@ -5,6 +5,11 @@ import ProfilePage from "./pages/ProfilePage";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import { Hero } from "./components/Hero/Hero.jsx";
 import { SignUp } from "./components/SignUp/SignUp.jsx";
+<<<<<<< HEAD
+=======
+
+import QuizPage from "./pages/QuizPage";
+>>>>>>> 90bad2eb4124ebb9dc49fe83928db568d9a41117
 
 import QuizPage from "./pages/QuizPage.jsx"
  
