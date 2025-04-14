@@ -30,8 +30,8 @@ export function rmQuizFromStorage(topic) {
 
 export const fetchQuizData = async (topic = undefined, saveInStorage = false) => {
 
-    if (localStorage.getItem(topic || "benessere") !== null && saveInStorage === false) {
-        return localStorage.getItem(topic || "benessere");
+    if (localStorage.getItem(topic) !== null && saveInStorage === false) {
+        return localStorage.getItem(topic);
     }
 
 
@@ -59,7 +59,7 @@ export const fetchQuizData = async (topic = undefined, saveInStorage = false) =>
     });
 
     if (saveInStorage === true) {
-        localStorage.setItem(topic || "benessere", JSON.stringify(result))
+        localStorage.setItem(topic, JSON.stringify(result))
     }
 
     return result;
