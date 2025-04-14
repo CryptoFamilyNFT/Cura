@@ -4,12 +4,12 @@ const MeditazioneMindfullness = () => {
     return (
         <div className="min-h-screen bg-[#A1C877] flex flex-col items-center justify-center p-6">
              <img 
-                src="../../assets/Images/mascotte_2.PNG" 
+                src="../../../public/mascotte_2.PNG" 
                 alt="mascotte" 
-                className="absolute top-1 w-180 h-100"
+                className="absolute top-1  w-90 h-80 rotate-8"
             />
               <img 
-                src="../../assets/Images/candele-1.png" 
+                src="../../../public/candele-1.png" 
                 alt="candele-1" 
                 className="absolute mt-70 left-20 w-180 h-100"
             />
