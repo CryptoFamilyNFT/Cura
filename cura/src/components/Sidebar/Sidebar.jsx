@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ContactSupport, EditNote } from "@mui/icons-material";
 import SettingsIcon from "@mui/icons-material/Settings";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import SidebarButton from "./SidebarButton";
 
 export default function Sidebar({
