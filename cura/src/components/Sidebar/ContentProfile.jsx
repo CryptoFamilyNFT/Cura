@@ -2,42 +2,20 @@ import SettingsContent from "./SettingsContent";
 import DiaryContent from "./DiaryContent";
 import SupportContent from "./SupportContent";
 
-const Diario = () => {
-  return (
-    <div>
-      <DiaryContent />
-    </div>
-  );
-};
-
-const Impostazioni = () => {
-  return (
-    <div>
-      <SettingsContent />
-    </div>
-  );
-};
-
-const Supporto = () => {
-  return (
-    <div>
-      <h1>
-        <SupportContent />
-      </h1>
-    </div>
-  );
-};
-
 const components = {
-  Diario,
-  Impostazioni,
-  Supporto,
+  Diario: DiaryContent,
+  Impostazioni: SettingsContent,
+  Supporto: SupportContent,
 };
 
 const ContentProfile = ({ section = "Diario" }) => {
   const ComponentToRender = components[section] || components.Diario;
 
-  return <ComponentToRender />;
+  return (
+    <div className="w-full max-w-screen-xl mx-auto">
+      <ComponentToRender />
+    </div>
+  );
 };
 
 export default ContentProfile;

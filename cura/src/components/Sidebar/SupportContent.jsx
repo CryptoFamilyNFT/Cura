@@ -1,48 +1,120 @@
 import { Email, Phone, LocationOn } from "@mui/icons-material";
+import { useState } from "react";
 
 export default function SupportContent() {
+  const [supportData, setSupportData] = useState({
+    email: "",
+    messaggio: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setSupportData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSupportSubmit = (e) => {
+    e.preventDefault();
+    const { email, messaggio } = supportData;
+
+    if (!email || !messaggio) {
+      alert("Compila tutti i campi.");
+      return;
+    }
+
+    if (!email.includes("@")) {
+      alert("Inserisci un'email valida.");
+      return;
+    }
+
+    alert("Richiesta inviata con successo!");
+    setSupportData({ email: "", messaggio: "" });
+  };
+
   return (
-    <div className="flex gap-6 p-6">
+    <div className="flex flex-col lg:flex-row gap-6 p-6 w-full">
       {/* Sezione Contatti */}
-      <div className="bg-white/30 rounded-lg w-2/5 p-6 shadow-md">
-        <h2 className="text-xl font-semibold">Contatti</h2>
-        <div className="flex flex-col p-4">
-          <div className="flex items-center gap-3 mt-4">
-            <Phone className="text-primary" />
-            <span>+39 0123 456 789</span>
-          </div>
-          <div className="flex items-center gap-3 mt-2">
-            <Email className="text-primary" />
-            <span>supporto@example.com</span>
-          </div>
-          <div className="flex items-center gap-3 mt-2">
-            <LocationOn className="text-primary" />
-            <span>Via Roma 10, Milano, Italia</span>
-          </div>
+      <div className="bg-white/30 rounded-2xl w-full lg:w-2/5 p-6 shadow-2xl backdrop-blur-md">
+        <h2 className="text-xl font-bold text-gray-800 mb-4">Contatti</h2>
+        <div className="flex flex-col gap-4 text-gray-700">
+          <ContactItem icon={<Phone />} text="+39 0123 456 789" />
+          <ContactItem icon={<Email />} text="supporto@example.com" />
+          <ContactItem
+            icon={<LocationOn />}
+            text="Via Roma 10, Milano, Italia"
+          />
         </div>
       </div>
 
-      {/* Sezione Form di Supporto */}
-      <div className=" h-100 w-3/5 bg-white/30 rounded-lg p-6 shadow-md">
-        <h2 className="text-xl font-semibold">Richiedi Supporto</h2>
-        <form className="space-y-4 mt-4">
-          <input
+      {/* Sezione Form */}
+      <div className="bg-white/30 rounded-2xl w-full lg:w-3/5 p-6 shadow-2xl backdrop-blur-md">
+        <h2 className="text-xl font-bold text-gray-800 mb-4">
+          Richiedi Supporto
+        </h2>
+        <form className="flex flex-col gap-4" onSubmit={handleSupportSubmit}>
+          <Input
             type="email"
+            name="email"
             placeholder="La tua email"
-            className="w-full p-2 border rounded"
+            value={supportData.email}
+            onChange={handleChange}
           />
-          <textarea
+          <TextArea
+            name="messaggio"
             placeholder="Descrivi la tua richiesta..."
-            className="w-full h-40 p-2 border rounded"
+            value={supportData.messaggio}
+            onChange={handleChange}
           />
-          <button
-            type="submit"
-            className="w-full bg-[#23687D] text-white p-2 rounded"
-          >
-            Invia richiesta
-          </button>
+          <Button type="submit" color="teal">
+            Invia Richiesta
+          </Button>
         </form>
       </div>
     </div>
   );
 }
+
+// Componenti di supporto
+
+const ContactItem = ({ icon, text }) => (
+  <div className="flex items-center gap-3">
+    <span className="text-primary">{icon}</span>
+    <span>{text}</span>
+  </div>
+);
+
+const Input = ({ name, value, onChange, placeholder, type = "text" }) => (
+  <input
+    type={type}
+    name={name}
+    value={value}
+    onChange={onChange}
+    placeholder={placeholder}
+    className="w-full p-2 border border-gray-300 rounded-xl bg-white/80 focus:ring-2 focus:ring-teal-500 outline-none transition"
+  />
+);
+
+const TextArea = ({ name, value, onChange, placeholder }) => (
+  <textarea
+    name={name}
+    value={value}
+    onChange={onChange}
+    placeholder={placeholder}
+    className="w-full h-40 p-2 border border-gray-300 rounded-xl bg-white/80 focus:ring-2 focus:ring-teal-500 outline-none transition resize-none"
+  />
+);
+
+const Button = ({ children, type = "button", color = "teal" }) => {
+  const colorClass = {
+    teal: "bg-[#23687D] hover:bg-[#1d5565]",
+    green: "bg-green-600 hover:bg-green-700",
+  }[color];
+
+  return (
+    <button
+      type={type}
+      className={`w-full p-2 text-white rounded-xl font-medium transition ${colorClass}`}
+    >
+      {children}
+    </button>
+  );
+};
