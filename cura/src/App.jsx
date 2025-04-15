@@ -16,7 +16,7 @@ import Page3 from "./pages/landing-page/Page3"
 function App() {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="Login" />
         <Route path="Quiz" element={<SezioneQuiz />} />
