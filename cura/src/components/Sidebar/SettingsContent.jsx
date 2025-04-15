@@ -62,112 +62,155 @@ export default function Impostazioni() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row w-full h-full gap-6 p-6">
-      <div className="w-full flex flex-col gap-6 bg-white/30 rounded-2xl shadow-2xl p-6 backdrop-blur-md">
-        <h1 className="text-2xl font-bold text-gray-800 text-center">
-          Impostazioni Utente
-        </h1>
-        <div className="flex flex-col lg:flex-row gap-6">
-          {/* Dettagli Utente */}
-          <form
-            onSubmit={handleUserSubmit}
-            className="flex flex-col gap-4 w-full lg:w-1/2 bg-white/50 p-6 rounded-2xl shadow-inner"
-          >
-            <h2 className="font-semibold text-lg text-gray-700 text-center">
-              Dati Personali
-            </h2>
-            <Input
+    <div className="flex flex-col lg:flex-row gap-8 p-6 w-full max-w-6xl mx-auto">
+      {/* Sezione Dati Utente */}
+      <div className="bg-white/30 rounded-2xl w-full lg:w-1/2 p-8 shadow-xl backdrop-blur-md border border-white/20 transition-shadow">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-white/20">
+          Dati Personali
+        </h2>
+        <form className="flex flex-col gap-6" onSubmit={handleUserSubmit}>
+          <div>
+            <label
+              htmlFor="nome"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Nome
+            </label>
+            <input
+              id="nome"
+              type="text"
               name="nome"
               value={userData.nome}
               onChange={handleUserChange}
               placeholder="Nome"
+              className="w-full p-3 border border-gray-300 rounded-lg bg-white/90 focus:ring-2 focus:ring-[#23687D] focus:border-transparent outline-none transition shadow-sm"
             />
-            <Input
+          </div>
+          <div>
+            <label
+              htmlFor="cognome"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Cognome
+            </label>
+            <input
+              id="cognome"
+              type="text"
               name="cognome"
               value={userData.cognome}
               onChange={handleUserChange}
               placeholder="Cognome"
+              className="w-full p-3 border border-gray-300 rounded-lg bg-white/90 focus:ring-2 focus:ring-[#23687D] focus:border-transparent outline-none transition shadow-sm"
             />
-            <Input
+          </div>
+          <div>
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Email
+            </label>
+            <input
+              id="email"
               type="email"
               name="email"
               value={userData.email}
               onChange={handleUserChange}
               placeholder="Email"
+              className="w-full p-3 border border-gray-300 rounded-lg bg-white/90 focus:ring-2 focus:ring-[#23687D] focus:border-transparent outline-none transition shadow-sm"
             />
-            <Input
+          </div>
+          <div>
+            <label
+              htmlFor="cellulare"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Cellulare
+            </label>
+            <input
+              id="cellulare"
+              type="text"
               name="cellulare"
               value={userData.cellulare}
               onChange={handleUserChange}
               placeholder="Cellulare"
+              className="w-full p-3 border border-gray-300 rounded-lg bg-white/90 focus:ring-2 focus:ring-[#23687D] focus:border-transparent outline-none transition shadow-sm"
             />
-            <Button type="submit" color="green">
-              Salva Modifiche
-            </Button>
-          </form>
-
-          {/* Cambia Password */}
-          <form
-            onSubmit={handlePasswordSubmit}
-            className="flex flex-col gap-4 w-full lg:w-1/2 bg-white/50 p-6 rounded-2xl shadow-inner"
+          </div>
+          <button
+            type="submit"
+            className="w-full p-3 text-white rounded-lg font-medium transition bg-[#23687D] hover:bg-[#1d5565] shadow-md hover:shadow-lg"
           >
-            <h2 className="font-semibold text-lg text-gray-700 text-center">
-              Cambia Password
-            </h2>
-            <Input
+            Salva Modifiche
+          </button>
+        </form>
+      </div>
+
+      {/* Sezione Password */}
+      <div className="bg-white/30 rounded-2xl w-full lg:w-1/2 p-8 shadow-xl backdrop-blur-md border border-white/20 transition-shadow">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-white/20">
+          Cambia Password
+        </h2>
+        <form className="flex flex-col gap-6" onSubmit={handlePasswordSubmit}>
+          <div>
+            <label
+              htmlFor="vecchiaPassword"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Vecchia Password
+            </label>
+            <input
+              id="vecchiaPassword"
               type="password"
               name="vecchiaPassword"
               value={passwordData.vecchiaPassword}
               onChange={handlePasswordChange}
               placeholder="Vecchia Password"
+              className="w-full p-3 border border-gray-300 rounded-lg bg-white/90 focus:ring-2 focus:ring-[#23687D] focus:border-transparent outline-none transition shadow-sm"
             />
-            <Input
+          </div>
+          <div>
+            <label
+              htmlFor="nuovaPassword"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Nuova Password
+            </label>
+            <input
+              id="nuovaPassword"
               type="password"
               name="nuovaPassword"
               value={passwordData.nuovaPassword}
               onChange={handlePasswordChange}
               placeholder="Nuova Password"
+              className="w-full p-3 border border-gray-300 rounded-lg bg-white/90 focus:ring-2 focus:ring-[#23687D] focus:border-transparent outline-none transition shadow-sm"
             />
-            <Input
+          </div>
+          <div>
+            <label
+              htmlFor="confermaNuovaPassword"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Conferma Nuova Password
+            </label>
+            <input
+              id="confermaNuovaPassword"
               type="password"
               name="confermaNuovaPassword"
               value={passwordData.confermaNuovaPassword}
               onChange={handlePasswordChange}
               placeholder="Conferma Nuova Password"
+              className="w-full p-3 border border-gray-300 rounded-lg bg-white/90 focus:ring-2 focus:ring-[#23687D] focus:border-transparent outline-none transition shadow-sm"
             />
-            <Button type="submit" color="blue">
-              Cambia Password
-            </Button>
-          </form>
-        </div>
+          </div>
+          <button
+            type="submit"
+            className="w-full p-3 text-white rounded-lg font-medium transition bg-[#23687D] hover:bg-[#1d5565] shadow-md hover:shadow-lg"
+          >
+            Cambia Password
+          </button>
+        </form>
       </div>
     </div>
   );
 }
-
-const Input = ({ name, value, onChange, placeholder, type = "text" }) => (
-  <input
-    type={type}
-    name={name}
-    value={value}
-    onChange={onChange}
-    placeholder={placeholder}
-    className="border border-gray-300 p-2 rounded-xl bg-white/80 focus:ring-2 focus:ring-teal-500 outline-none transition"
-  />
-);
-
-const Button = ({ type, color = "blue", children }) => {
-  const colorClass = {
-    green: "bg-green-600 hover:bg-green-700",
-    blue: "bg-blue-500 hover:bg-blue-600",
-  }[color];
-
-  return (
-    <button
-      type={type}
-      className={`mt-2 p-2 ${colorClass} text-white rounded-xl font-medium transition`}
-    >
-      {children}
-    </button>
-  );
-};
