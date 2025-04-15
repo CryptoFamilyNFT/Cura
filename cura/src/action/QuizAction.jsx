@@ -38,7 +38,7 @@ export const fetchQuizData = async (topic = undefined, saveInStorage = false) =>
     const llm = new ChatOpenAI({
         model: "gpt-4o-mini",
         temperature: 0.7,
-        apiKey: import.meta.env.VITE_OPENAI_API_KEY,
+        apiKey:"",
     });
 
     const parser = await callZodOutputParser();
