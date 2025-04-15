@@ -4,14 +4,14 @@ const AssistentePersonale = () => {
     return (
         <div className="min-h-screen bg-gradient-to-r from-[#23687D] to-[#A1C877] flex flex-col items-center justify-center p-6">
               <img 
-                src="../../assets/Images/astratto-equilibrio-1.png" 
+                src="../../../public/astratto-equilibrio-1.png" 
                 alt="astratto-equilibrio-1" 
-                className="absolute left-0 "
+                className="absolute left-0 mt-14 "
             />
                 <img 
-                src="../../assets/Images/mascotte_2.PNG" 
+                src="../../../public/mascotte_2.PNG" 
                 alt="mascotte" 
-                className="absolute top-1 right-1 w-180 h-100"
+                className="absolute top-1 right-60 w-90 h-80 -rotate-8"
             />
             <div className="flex flex-col items-center text-center">
                 <h1 className="absolute right-15 mt-3 text-white text-9xl font-bold">02</h1>
