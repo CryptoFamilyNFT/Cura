@@ -2,39 +2,35 @@
 import React, { useEffect } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber"; // Canvas per la scena 3D, useFrame per animazioni, useThree per accedere alla scena
 import { OrbitControls, Environment, useGLTF } from "@react-three/drei"; // Drei aggiunge controlli utili come OrbitControls e ambiente HDR
-import { useNavigate } from "react-router-dom"; // useNavigate per navigare tra le pagine
+import { useNavigate } from "react-router"; // useNavigate per navigare tra le pagine
 
 function Planet() {
-  const gltf = useGLTF(
-    "https://drive.google.com/uc?export=download&id=1YzJOdvP2X7PSTHoE9Gn4DPHOOuIqOeuA"
-  ); // Carica il modello 3D dal file .glb
+  const gltf = useGLTF("../../../public/Images/pianeta.glb"); // Carica il modello 3D dal file .glb
   const planet = gltf.scene; // Accede alla scena del modello caricato
   const navigate = useNavigate(); // Hook per cambiare pagina al click
 
   useFrame(() => {
-    planet.rotation.y += 0.001; // Ruota il pianeta continuamente lungo l'asse Y
+    planet.rotation.y += 0.0001; // Ruota il pianeta continuamente lungo l'asse Y
   });
 
   useEffect(() => {
     // Cerca nel modello i nomi degli oggetti interattivi
-    const Quiz = planet.getObjectByName("Quiz");
-    const Mascotte = planet.getObjectByName("Mascotte");
-    const Profilo = planet.getObjectByName("Profilo");
-    const Meditazione = planet.getObjectByName("Meditazione");
-
+    const Quiz = planet.getObjectByName("question_mark");
+    const Mascotte = planet.getObjectByName("Cube");
+    const Profilo = planet.getObjectByName("Cube020");
+    const Meditazione = planet.getObjectByName("scena_meditazione001" || "Circle001" || "Cylinder_Pillow_Grey" || "Pillow001");
+        
     // Se il modello esiste allora ci naviga
     if (Quiz)
       Quiz.userData = {
         onClick: () => {
-          console.log("Vai alla sezione quiz");
-          navigate("/quiz"); //inserire rotte giuste
+          navigate("/Quiz"); //inserire rotte giuste
         },
       };
 
     if (Mascotte)
       Mascotte.userData = {
         onClick: () => {
-          console.log("Vai alla sezione chat");
           navigate("/chat");
         },
       };
@@ -42,16 +38,14 @@ function Planet() {
     if (Profilo)
       Profilo.userData = {
         onClick: () => {
-          console.log("Vai alla sezione profilo");
-          navigate("/profilo");
+          navigate("/Profile");
         },
       };
 
     if (Meditazione)
       Meditazione.userData = {
         onClick: () => {
-          console.log("Vai alla sezione meditazione");
-          navigate("/meditazione");
+          navigate("/Meditazione");
         },
       };
   }, [planet]); // array delle dipendenze è il modello 3d
@@ -80,7 +74,6 @@ function ClickHandler() {
         }
       }
     };
-
     // Aggiunge e rimuove l'event listener
     gl.domElement.addEventListener("click", handleClick);
     return () => gl.domElement.removeEventListener("click", handleClick);
@@ -91,9 +84,12 @@ function ClickHandler() {
 
 export default function MainSection() {
   return (
-    <div>
+    <div className="bg-[#A1C877] ">
       {/* Crea il canvas 3D con telecamera iniziale */}
-      <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>
+      <Canvas
+        camera={{ position: [0, 0, 8], fov: 40 }}
+        style={{ width: "100vw", height: "100vh" }}
+      >
         <ambientLight intensity={0.5} /> {/* Luce ambientale */}
         <directionalLight position={[5, 5, 5]} intensity={1} />{" "}
         {/* Luce direzionale */}

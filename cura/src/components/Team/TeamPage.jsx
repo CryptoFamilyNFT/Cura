@@ -1,34 +1,34 @@
 import React, { useState } from "react";
-import cloud from "../../assets/Images/cloud2.png";
-import albero from "../../assets/Images/albero.png";
-import arrowSvg from "../../assets/Images/right-arrow-svgrepo-com.svg";
+import cloud from "../../../public/Images/cloud2.png";
+import albero from "../../../public/Images/albero.png";
+import arrowSvg from "../../../public/Images/right-arrow-svgrepo-com.svg";
 
 export default function TeamPage() {
   const teamMembers = [
     {
       id: 1,
       name: "Salim Znaidi",
-      image: "../../assets/Images/salim.png",
+      image: "../../../public/Images/salim.png",
     },
     {
       id: 2,
       name: "Giuseppe di Loreto",
-      image: "../../assets/Images/Giuseppe.png",
+      image: "../../../public/Images/Giuseppe.png",
     },
     {
       id: 3,
       name: "Andrea Seidita",
-      image: "../../assets/Images/Andrea.png",
+      image: "../../../public/Images/Andrea.png",
     },
     {
       id: 4,
-      name: "Christian Bovensi",
-      image: "../../assets/Images/Cristian.png",
+      name: "Cristian Bovenzi",
+      image: "../../../public/Images/Cristian.png",
     },
     {
       id: 5,
       name: "Dario Scalia",
-      image: "../../assets/Images/Dario.png",
+      image: "../../../public/Images/Dario.png",
     },
   ];
 

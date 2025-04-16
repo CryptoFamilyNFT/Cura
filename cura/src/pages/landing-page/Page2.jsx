@@ -8,11 +8,6 @@ const AssistentePersonale = () => {
                 alt="astratto-equilibrio-1" 
                 className="absolute left-0 mt-14 "
             />
-                <img 
-                src="../../../public/mascotte_2.PNG" 
-                alt="mascotte" 
-                className="absolute top-1 right-60 w-90 h-80 -rotate-8"
-            />
             <div className="flex flex-col items-center text-center">
                 <h1 className="absolute right-15 mt-3 text-white text-9xl font-bold">02</h1>
                 <h2 className="text-white text-5xl mt-60 max-w-lg break-words text-left w-full py-4">ASSISTENTE AI PERSONALE</h2>

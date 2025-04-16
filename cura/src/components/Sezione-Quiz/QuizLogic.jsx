@@ -13,7 +13,7 @@ export const QuizLogic = () => {
     useEffect(() => {
         (async () => {
             try {
-                const result = await fetchQuizData("AUTOCONSAPEVOLEZZA");
+                const result = await fetchQuizData(localStorage.getItem("Quiz"));
                 setDataRes(result);
             } catch (error) {
                 console.error("Error fetching quiz data:", error);
