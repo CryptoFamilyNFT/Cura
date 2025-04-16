@@ -22,8 +22,8 @@ const menuButton = [
         link: '/team'
     },
     {
-        title: 'Profile',
-        link: '/profile'
+        title: 'Menu',
+        link: '/Menu'
     }
 ]
 
