@@ -76,7 +76,7 @@ export default function Navbar({ handleTheme }) {
             src="/static/images/avatar/1.jpg"
             sx={{ width: 30, height: 30, mr: 1 }}
           />
-          <button className=" bg-emerald-900  hover:bg-transparent hover:text-emerald-900 border-emerald-900 border-1 w-full text-white py-1 px-3 rounded">
+          <button onClick={() => navigate("/Profile")} className=" bg-emerald-900  hover:bg-transparent hover:text-emerald-900 border-emerald-900 border-1 w-full text-white py-1 px-3 rounded">
             Mario Rossi
           </button>
         </div>

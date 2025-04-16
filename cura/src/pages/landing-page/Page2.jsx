@@ -4,14 +4,9 @@ const AssistentePersonale = () => {
     return (
         <div className="min-h-screen bg-gradient-to-r from-[#23687D] to-[#A1C877] flex flex-col items-center justify-center p-6">
               <img 
-                src="../../assets/Images/astratto-equilibrio-1.png" 
+                src="../../../public/Images/astratto-equilibrio-1.png" 
                 alt="astratto-equilibrio-1" 
                 className="absolute left-0 "
-            />
-                <img 
-                src="../../assets/Images/mascotte_2.PNG" 
-                alt="mascotte" 
-                className="absolute top-1 right-1 w-180 h-100"
             />
             <div className="flex flex-col items-center text-center">
                 <h1 className="absolute right-15 mt-3 text-white text-9xl font-bold">02</h1>

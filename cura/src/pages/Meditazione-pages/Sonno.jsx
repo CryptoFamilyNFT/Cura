@@ -1,16 +1,17 @@
 import React from "react";
-import AudioPlayerSonno from "../components/AudioPlayerSonno";
-import { useNavigate } from "react-router-dom";
+import AudioPlayerSonno from "../../components/Components-meditazione/AudioPlayerSonno.jsx";
+import { useNavigate } from "react-router";
+import { useParams } from "react-router";
 
 const tracks = [
   {
-    src: "./Pioggia.mp3",
-    image: "./pioggia.jpg",
+    src: "../../assets/mp3/Pioggia.mp3",
+    image: "../../../public/Images/pioggia.jpg",
     title: "Pioggia",
   },
   {
-    src: "./Ruscello.mp3",
-    image: "./ruscello.jpg",
+    src: "../../assets/mp3/Ruscello.mp3",
+    image: "../../../public/Images/ruscello.jpg",
     title: "Ruscello",
   },
 
@@ -29,7 +30,7 @@ export default function App() {
           className="w-200 h-fit  bg-[#205f72] text-white text-2xl py-2 px-6 rounded-lg transition-colors duration-100 hover:bg-[#A1C877] "
           onClick={() => {
             console.log("Navigating to/");
-            navigate("/");
+            navigate("/Meditazione");
           }}
         >
           Meditazione

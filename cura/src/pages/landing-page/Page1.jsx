@@ -4,17 +4,17 @@ const Quizinterattivi = () => {
     return (
         <div className="min-h-screen bg-[#A1C877] flex flex-col items-center justify-center p-6">
             <img 
-                src="../../assets/Images/mascotte_2.PNG" 
+                src="../../public/Images/mascotte_2.PNG" 
                 alt="mascotte" 
-                className="absolute top-1 left-1 w-180 h-100"
+                className="absolute top-1 left-1 w-100 h-100"
             />
              <img 
-                src="../../assets/Images/Nuvole.png" 
+                src="../../public/Images/Nuvole.png" 
                 alt="nuvola" 
                 className="absolute top-20 w-120 h-70"
             />
              <img 
-                src="../../assets/Images/albero-1.png" 
+                src="../../public/Images/albero-1.png" 
                 alt="albero-1" 
                 className="absolute right-0 w-100 h-175 "
             />
