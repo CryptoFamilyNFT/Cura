@@ -13,6 +13,7 @@ import Page1 from "./pages/landing-page/Page1"
 import Page2 from "./pages/landing-page/Page2"
 import Page3 from "./pages/landing-page/Page3"
 import { useDispatch, useSelector } from "react-redux";
+import { Login } from "@mui/icons-material";
 
 function App() {
   const user = useSelector((state) => state.user)
@@ -26,7 +27,8 @@ function App() {
         <Route path="Team" element={<TeamPage />} />
         <Route path="/" element={<Hero />} />
         <Route path="QuizPage" element={<QuizPage />} />
-        <Route path="SignUp" element={<SignUp />} />
+        <Route path="signup" element={<SignUp />} />
+        <Route path="login" element={<Login />} />
         <Route path="profile" element={<ProfilePage />} />
         <Route path="/Review" element={<HomeReview />} />
         <Route path="/Feedback" element={<FeedbackPage />} />
