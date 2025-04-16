@@ -14,16 +14,16 @@ const menuButton = [
         link: '/'
     },
     {
-        title: 'About',
-        link: '/about'
+        title: 'Quiz',
+        link: '/quiz'
     },
     {
-        title: 'Services',
-        link: '/services'
+        title: 'Team',
+        link: '/team'
     },
     {
-        title: 'Contact',
-        link: '/contact'
+        title: 'Profile',
+        link: '/profile'
     }
 ]
 
