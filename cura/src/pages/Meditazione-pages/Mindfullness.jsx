@@ -1,6 +1,6 @@
 import React from "react";
-import AudioPlayerMindfullness from "../../components/Components-meditazione/AudioPlayerMindfullness.jsx";
-import { useNavigate } from "react-router";
+import AudioPlayerMindfullness from "../../components/Components-meditazione/AudioPlayerMindfullness";
+import { useNavigate } from "react-router-dom";
 
 const tracks = [
   {
@@ -17,16 +17,16 @@ const tracks = [
   //aggiungere altre tracce nell'array tracks
 ];
 
-export default function App() {
+export default function Mindfullness() {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col justify-start items-start min-h-screen bg-gradient-to-b from-[#205f72] to-[#A1C877]">
+    <div className="flex absolute flex-row w-full h-screen bg-gradient-to-b from-[#205f72] to-[#A1C877] overflow-hidden">
       <div>
         <AudioPlayerMindfullness tracks={tracks} />
       </div>
       <div>
         <button
-          className=" h-fit ml-60 bg-[#205f72] text-white text-2xl py-2 px-6 rounded-lg w-200 transition-colors duration-100 hover:bg-[#A1C877] "
+          className="w-full absolute bottom-20 left-1/4 max-w-[200px] bg-[#205f72] text-white text-2xl py-2 px-6 rounded-lg transition-colors duration-100 hover:bg-[#A1C877]"
           onClick={() => {
             console.log("Navigating to/");
             navigate("/Meditazione");

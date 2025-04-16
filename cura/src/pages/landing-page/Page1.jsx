@@ -2,7 +2,7 @@ import React from "react";
 
 const Quizinterattivi = () => {
     return (
-        <div className="min-h-screen bg-[#A1C877] flex flex-col items-center justify-center p-6">
+        <div className="min-h-screen w-auto relative bg-[#A1C877] flex flex-col items-center justify-center p-6">
             <img 
                 src="../../../public/mascotte_2.PNG" 
                 alt="mascotte" 
@@ -16,7 +16,7 @@ const Quizinterattivi = () => {
              <img 
                 src="../../../public/albero.png" 
                 alt="albero-1" 
-                className="absolute right-0 w-100 h-175 "
+                className="absolute right-1 bottom-0 w-100 h-175 "
             />
             <div className="flex flex-col w-screen items-center text-center">
                 <h1 className="absolute top-10 left-15 text-[#23687D] text-9xl font-bold">01</h1>

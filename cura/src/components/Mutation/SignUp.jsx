@@ -6,7 +6,7 @@ import { login, logout, updateUser, getUser, signUp } from "../../redux/User/use
 import { useSignUpMutation } from "../../redux/_api/UserApiSlice";
 import { Link, useNavigate } from "react-router";
 
-export const SignUp = () => {
+export const SignUp = ({struct = false}) => {
     const [email, setEmail] = useState("");
     const [emailError, setEmailError] = useState("");
     const [password, setPassword] = useState("");
@@ -31,6 +31,7 @@ export const SignUp = () => {
             setEmailError("");
         }
     };
+    const path = window.location.pathname;
 
     const validatePassword = (value) => {
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
@@ -52,13 +53,10 @@ export const SignUp = () => {
     };
 
     useEffect(() => {
-        if (user.isAuthenticated) {
-            alert("You are getting redirected to the profile page");
-            setTimeout(() => {
-                navigate("/profile");
-            }, 1000)
+        if (path === "/signup" && user.isAuthenticated) {
+            navigate("/profile");
         }
-    }, [user.isAuthenticated]);
+    }, [user.isAuthenticated, path]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -89,6 +87,110 @@ export const SignUp = () => {
             });
         setIsLoading(false);
     };
+
+    if (struct === true) {
+        return (
+            <div className="h-auto w-90 relative bg-rgba(0,0,0,1) shadow-2xl rounded-lg p-4 flex flex-col items-center opacity-90 justify-center space-y-3 mt-10">
+                <h4 className="text-emerald-700 text-2xl font-bold">Sign Up</h4>
+
+                <div className="flex items-center justify-center max-w-100 p-2">
+                    <WrappedSignMascotte />
+                </div>
+
+                <form
+                    onSubmit={handleSubmit}
+                    className="flex flex-col gap-4 w-full max-w-sm"
+                >
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => {
+                            setEmail(e.target.value);
+                            validateEmail(e.target.value);
+                            if (e.target.value === "") {
+                                setEmailError("");
+                            }
+                        }}
+                        placeholder="Email"
+                        className="border border-gray-300 rounded p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    />
+                    {emailError.trim() !== "" && <p className="text-red-500 text-sm">{emailError}</p>}
+
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => {
+                            setPassword(e.target.value);
+                            validatePassword(e.target.value);
+                            if (e.target.value === "") {
+                                setPasswordError("");
+                            }
+                        }}
+                        placeholder="Password"
+                        className="border border-gray-300 rounded p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    />
+                    {passwordError.trim() !== "" && (
+                        <p className="text-red-500 text-sm">{passwordError}</p>
+                    )}
+
+                    <input
+                        type="password"
+                        value={confirmPassword}
+                        onChange={(e) => {
+                            setConfirmPassword(e.target.value);
+                            validateConfirmPassword(e.target.value);
+                            if (e.target.value === "") {
+                                setConfirmPasswordError("");
+                            }
+                        }}
+                        placeholder="Confirm Password"
+                        className="border border-gray-300 rounded p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    />
+                    {confirmPasswordError !== "" && (
+                        <p className="text-red-500 text-sm">{confirmPasswordError}</p>
+                    )}
+
+                    <button
+                        type="submit"
+                        disabled={isLoading}
+                        className="bg-[#7E6C97] text-white rounded p-3 hover:bg-transparent hover:border hover:border-[#7E6C97] hover:text-[#7E6C97] transition duration-300"
+                    >
+                        {isLoading ? "Signing Up..." : "Sign Up"}
+                    </button>
+                </form>
+
+                {isError && (
+                    <p className="text-red-600 text-sm mt-2">
+                        Something went wrong. Please try again.
+                    </p>
+                )}
+                {isSuccess && (
+                    <p className="text-emerald-600 text-sm mt-2">
+                        Sign up successful! 🎉
+                    </p>
+                )}
+
+                <p className="text-sm text-gray-500 pt-2 pb-4">
+                    Already have an account?{" "}
+                    <Link to="/login" className="text-emerald-800 hover:underline">
+                        Login
+                    </Link>
+                </p>
+
+                <button
+                    className="flex w-90 items-center gap-2 border text-emerald-700 hover:text-white rounded p-3 hover:bg-emerald-700 transition duration-300"
+                    onClick={() => console.log("Google Sign-In")}
+                >
+                    <img
+                        src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                        alt="Google"
+                        className="w-5 h-5"
+                    />
+                    Sign in with Google
+                </button>
+            </div>
+        )
+    }
 
     return (
         <div className="flex justify-center items-center absolute w-full h-full">

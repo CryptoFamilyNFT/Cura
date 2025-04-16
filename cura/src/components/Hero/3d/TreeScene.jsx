@@ -12,7 +12,7 @@ export function ThreeScene(props) {
 
   React.useEffect(() => {
     if (mascotte.current) {
-      mascotte.current.scale.set(1, 1, 1);
+      mascotte.current.scale.set(0.6, 0.6, 0.6);
     }
     if (materials) {
       Object.values(materials).forEach((material) => {

@@ -43,15 +43,13 @@ export const SignIn = () => {
             setPasswordError("");
         }
     };
+    const path = window.location.pathname;
 
     useEffect(() => {
-        if (user.isAuthenticated) {
-            alert("You are getting redirected to the profile page");
-            setTimeout(() => {
-                navigate("/profile");
-            }, 1000)
+        if (path === "/signup" && user.isAuthenticated) {
+            navigate("/profile");
         }
-    }, [user.isAuthenticated]);
+    }, [user.isAuthenticated, path]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();

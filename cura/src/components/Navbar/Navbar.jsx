@@ -7,6 +7,7 @@ import { Link, useNavigate } from "react-router";
 import { LogoutOutlined } from "@mui/icons-material";
 import { logout } from "../../redux/User/userSlice";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 const menuButton = [
     {
@@ -22,21 +23,27 @@ const menuButton = [
         link: '/team'
     },
     {
-        title: 'Menu',
-        link: '/Menu'
-    }
+        title: 'Meditazione',
+        link: '/meditazione'
+    },
+    {
+        title: 'Chatbot',
+        link: '/chatbot'
+    },
 ]
 
-const Navbar = ({ userState }) => {
-    const dispatch = useDispatch();
+const Navbar = () => {
     const navigate = useNavigate();
+    const userState = useSelector((state) => state.user)
+    const dispatch = useDispatch()
+
     return (
         <div className={`fixed top-0 left-0 w-full h-12 bg-gradient-to-b from-emerald-80 to-transparent bg-opacity-70 backdrop-blur-lg flex flex-row z-[9999]`}>
             {/** left box side */}
             <div className="flex items-center p-2 flex-row flex-1">
                 <img src={logo} alt="cura logo" className="h-10 w-10" onClick={() => navigate("/")}/>
-                <div className={`${userState.isAuthenticated ? "border-l border-emerald-500" : "border-0"} h-full mx-2`}>
-                    {userState.isAuthenticated && menuButton.map((button) => (
+                <div className={`${userState.user.isAuthenticated ? "border-l border-emerald-500" : "border-0"} h-full mx-2`}>
+                    {userState.user.isAuthenticated && menuButton.map((button) => (
                         <Link to={button.link} key={button.title}>
                             <button className={`bg-[rgba(255,255,255,0.3)] ml-2 hover:bg-emerald-900 hover:text-emerald-50 border-emerald-500 border-1 text-emerald-600 font-semibold py-1 px-3 rounded`} key={button.title}>
                                 {button.title}
@@ -57,14 +64,14 @@ const Navbar = ({ userState }) => {
                     <DarkModeIcon className={`${theme.palette.mode === "dark" ? "text-emerald-500" : "text-gray-400"}`} />
                 </div>*/}
                 <div className="flex items-center mr-2">
-                    {userState.isAuthenticated ?
+                    {userState.user.isAuthenticated ?
                         <div className="flex items-center gap-4">
                             <IconButton onClick={() => dispatch(logout())}>
                                 <LogoutOutlined />
                             </IconButton>
                             <Link to="/profile">
                                 <button className="bg-[rgba(255,255,255,0.3)]  hover:bg-emerald-900 hover:text-white hover:border-emerald-900 border-1 w-full text-emerald-900 py-1 px-3 rounded">
-                                    {userState.user.email.slice("@")}
+                                    {userState.user.user.email.slice("@")}
                                 </button>
                             </Link>
                         </div>
