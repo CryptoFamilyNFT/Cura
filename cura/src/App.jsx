@@ -12,15 +12,18 @@ import FeedbackPage from "./pages/FeedbackPage";
 import Page1 from "./pages/landing-page/Page1"
 import Page2 from "./pages/landing-page/Page2"
 import Page3 from "./pages/landing-page/Page3"
+import { useDispatch, useSelector } from "react-redux";
 
 function App() {
+  const user = useSelector((state) => state.user)
+  const dispatch = useDispatch()
   return (
     <>
-      <Navbar />
+      <Navbar userState={user} dispatch={dispatch} />
       <Routes>
         <Route path="Login" />
         <Route path="Quiz" element={<SezioneQuiz />} />
-        <Route path="team" element={<TeamPage />} />
+        <Route path="Team" element={<TeamPage />} />
         <Route path="/" element={<Hero />} />
         <Route path="QuizPage" element={<QuizPage />} />
         <Route path="SignUp" element={<SignUp />} />
