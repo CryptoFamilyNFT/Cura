@@ -1,6 +1,6 @@
 import React from "react";
-import ScenaMeditazione from "../../components/Components-meditazione/ScenaMeditazione.jsx";
-import { useNavigate } from "react-router";
+import ScenaMeditazione from "../../components/Components-meditazione/ScenaMeditazione";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function MeditazioneHome() {
   const navigate = useNavigate();

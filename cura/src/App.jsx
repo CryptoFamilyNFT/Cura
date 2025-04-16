@@ -9,19 +9,20 @@ import { SignIn } from "./components/Mutation/SignIn"
 import HomeReview from "./components/Review/HomeReview"
 import QuizPage from "./pages/QuizPage";
 import FeedbackPage from "./pages/FeedbackPage";
+import Page1 from "./pages/landing-page/Page1"
+import Page2 from "./pages/landing-page/Page2"
+import Page3 from "./pages/landing-page/Page3"
 import MeditazioneHome from "./pages/Meditazione-pages/MeditazioneHome.jsx";
-import Mindfullness from "./pages/Meditazione-pages/Mindfullness.jsx"
-import Sonno from "./pages/Meditazione-pages/Sonno.jsx"
-import MainSection from "./pages/home-page/MainSection.jsx"
-import LandingPage from "./pages/landing-page/LandingPage.jsx";
-import { useDispatch, useSelector } from "react-redux";
+import MeditazioneMindfullness from "./pages/landing-page/Page3";
+import Sonno from "./pages/Meditazione-pages/Sonno.jsx";
+import Mindfullness from "./pages/Meditazione-pages/Mindfullness.jsx";
+import Chatbot from "./components/chatbot/chatbot.jsx";
 
 function App() {
-  const user = useSelector((state) => state.user)
-  const dispatch = useDispatch()
+
   return (
     <>
-      <Navbar userState={user} dispatch={dispatch} />
+      <Navbar />
       <Routes>
         <Route path="/Meditazione" element={<MeditazioneHome/>}/>
           <Route path="/Meditazione/mindfullness" element={<Mindfullness/>}/>
@@ -34,11 +35,14 @@ function App() {
         <Route path="profile" element={<ProfilePage />} />
         <Route path="/Review" element={<HomeReview />} />
         <Route path="/Feedback" element={<FeedbackPage />} />
-        <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/Profile" element={<ProfilePage />} />
-        <Route path="/about" element={<TeamPage/>}/>
-        <Route path="/Menu" element={<MainSection/>}/>
-        <Route path='/LandingPage' element={<LandingPage/>}/>
+        <Route path="/Page1" element={<Page1 />} />
+        <Route path="/Page2" element={<Page2 />} />
+        <Route path="/Page3" element={<Page3 />} />
+        <Route path="meditazione" element={<MeditazioneHome />} />
+        <Route path="*" element={<h1>404 Not Found</h1>} />
+        <Route path="/mindfullness" element={<Mindfullness />} />
+        <Route path="/sonno" element={<Sonno />} />
+        <Route path="/chatbot" element={<Chatbot />} />
       </Routes>
     </>
   );

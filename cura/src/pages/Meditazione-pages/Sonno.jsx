@@ -1,7 +1,7 @@
 import React from "react";
-import AudioPlayerSonno from "../../components/Components-meditazione/AudioPlayerSonno.jsx";
-import { useNavigate } from "react-router";
-import { useParams } from "react-router";
+import AudioPlayerSonno from "../../components/Components-meditazione/AudioPlayerSonno";
+import { useNavigate } from "react-router-dom";
+import ScenaMeditazione from "../../components/Components-meditazione/ScenaMeditazione";
 
 const tracks = [
   {
@@ -18,16 +18,19 @@ const tracks = [
   //aggiungere altre tracce nell'array tracks
 ];
 
-export default function App() {
+export default function Sonno() {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col  items-start justify-center min-h-screen  bg-gradient-to-b from-[#205f72] to-[#A1C877] ">
-      <div>
-        <AudioPlayerSonno tracks={tracks} />
+    <div className="flex absolute flex-row w-full h-screen bg-gradient-to-b from-[#205f72] to-[#A1C877] overflow-hidden">
+      {/* Colonna sinistra */}
+      <div className=" w-1/2 h-screen">
+        <ScenaMeditazione modelPath="https://drive.google.com/uc?export=download&id=1H7rqHKduXVbhoB_u_xBJQGQHf3hRcUKH" />
+        {/* qui passo modello sonno */}
       </div>
-      <div className="w-full p-4">
+      {/* Colonna sinistra */}
+      <div className="flex absolute  h-full flex-col  w-1/2 p-4">
         <button
-          className="w-200 h-fit  bg-[#205f72] text-white text-2xl py-2 px-6 rounded-lg transition-colors duration-100 hover:bg-[#A1C877] "
+          className="w-full absolute bottom-20 left-1/3 max-w-[200px] bg-[#205f72] text-white text-2xl py-2 px-6 rounded-lg transition-colors duration-100 hover:bg-[#A1C877]"
           onClick={() => {
             console.log("Navigating to/");
             navigate("/Meditazione");
@@ -35,6 +38,11 @@ export default function App() {
         >
           Meditazione
         </button>
+      </div>
+
+      {/* Colonna destra */}
+      <div className="flex h-auto w-1/2 p-4">
+        <AudioPlayerSonno tracks={tracks} />
       </div>
     </div>
   );

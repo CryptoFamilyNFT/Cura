@@ -2,11 +2,11 @@ import React from "react";
 
 const AssistentePersonale = () => {
     return (
-        <div className="min-h-screen bg-gradient-to-r from-[#23687D] to-[#A1C877] flex flex-col items-center justify-center p-6">
+        <div className="min-h-screen relative bg-gradient-to-r from-[#23687D] to-[#A1C877] flex flex-col items-center justify-center p-6">
               <img 
                 src="../../../public/astratto-equilibrio-1.png" 
                 alt="astratto-equilibrio-1" 
-                className="absolute left-0 mt-14 "
+                className="absolute left-0 bottom-0"
             />
             <div className="flex flex-col items-center text-center">
                 <h1 className="absolute right-15 mt-3 text-white text-9xl font-bold">02</h1>

@@ -63,7 +63,7 @@ React.useEffect(() => {
 export default function WrappedSignMascotte() {
   return (
     <Canvas>
-      <ambientLight intensity={0.95} />
+      <ambientLight intensity={2.2} />
       <MascotteSign />
     </Canvas>
   );
