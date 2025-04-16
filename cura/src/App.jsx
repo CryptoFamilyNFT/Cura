@@ -22,7 +22,6 @@ function App() {
     <>
       <Navbar userState={user} dispatch={dispatch} />
       <Routes>
-        <Route path="Login" />
         <Route path="Quiz" element={<SezioneQuiz />} />
         <Route path="Team" element={<TeamPage />} />
         <Route path="/" element={<Hero />} />
