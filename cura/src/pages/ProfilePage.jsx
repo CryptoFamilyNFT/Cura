@@ -7,7 +7,7 @@ export default function MainLayout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div className="flex flex-col md:flex-row h-screen bg-gradient-to-t from-[#23687D] to-[#A1C877]">
+    <div className="flex flex-col pt-10 md:flex-row h-screen bg-gradient-to-t from-[#23687D] to-[#A1C877]">
       {/* Mobile toggle */}
       <div className="md:hidden flex items-center justify-between p-4">
         <button
