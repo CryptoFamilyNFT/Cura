@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Avatar, useTheme } from "@mui/material";
+import { Avatar, IconButton, useTheme } from "@mui/material";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import logo from "../../assets/Images/mascotte_2.png";
