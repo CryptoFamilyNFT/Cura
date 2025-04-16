@@ -31,90 +31,86 @@ export default function SupportContent() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row gap-6 p-6 w-full">
+    <div className="flex flex-col lg:flex-row gap-8 p-6 w-full max-w-6xl mx-auto">
       {/* Sezione Contatti */}
-      <div className="bg-white/30 rounded-2xl w-full lg:w-2/5 p-6 shadow-2xl backdrop-blur-md">
-        <h2 className="text-xl font-bold text-gray-800 mb-4">Contatti</h2>
-        <div className="flex flex-col gap-4 text-gray-700">
-          <ContactItem icon={<Phone />} text="+39 0123 456 789" />
-          <ContactItem icon={<Email />} text="supporto@example.com" />
-          <ContactItem
-            icon={<LocationOn />}
-            text="Via Roma 10, Milano, Italia"
-          />
+      <div className="bg-white/30 rounded-2xl w-full lg:w-2/5 p-8 shadow-xl backdrop-blur-md border border-white/20  transition-shadow">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-white/20">
+          Contatti
+        </h2>
+        <div className="flex flex-col gap-6 text-gray-700">
+          <div className="flex items-start gap-4">
+            <Phone className="text-[#23687D] mt-1" />
+            <div>
+              <p className="font-medium text-gray-800">+39 0123 456 789</p>
+              <p className="text-sm text-gray-500">Lun-Ven, 9:00-18:00</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <Email className="text-[#23687D] mt-1" />
+            <div>
+              <p className="font-medium text-gray-800">supporto@example.com</p>
+              <p className="text-sm text-gray-500">Rispondiamo entro 24h</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <LocationOn className="text-[#23687D] mt-1" />
+            <div>
+              <p className="font-medium text-gray-800">
+                Via Roma 10, Milano, Italia
+              </p>
+              <p className="text-sm text-gray-500">Sede principale</p>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Sezione Form */}
-      <div className="bg-white/30 rounded-2xl w-full lg:w-3/5 p-6 shadow-2xl backdrop-blur-md">
-        <h2 className="text-xl font-bold text-gray-800 mb-4">
+      <div className="bg-white/30 rounded-2xl w-full lg:w-3/5 p-8 shadow-xl backdrop-blur-md border border-white/20  transition-shadow">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-white/20">
           Richiedi Supporto
         </h2>
-        <form className="flex flex-col gap-4" onSubmit={handleSupportSubmit}>
-          <Input
-            type="email"
-            name="email"
-            placeholder="La tua email"
-            value={supportData.email}
-            onChange={handleChange}
-          />
-          <TextArea
-            name="messaggio"
-            placeholder="Descrivi la tua richiesta..."
-            value={supportData.messaggio}
-            onChange={handleChange}
-          />
-          <Button type="submit" color="teal">
+        <form className="flex flex-col gap-6" onSubmit={handleSupportSubmit}>
+          <div>
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Email
+            </label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="La tua email"
+              value={supportData.email}
+              onChange={handleChange}
+              className="w-full p-3 border border-gray-300 rounded-lg bg-white/90 focus:ring-2 focus:ring-[#23687D] focus:border-transparent outline-none transition shadow-sm"
+            />
+          </div>
+          <div>
+            <label
+              htmlFor="messaggio"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Il tuo messaggio
+            </label>
+            <textarea
+              id="messaggio"
+              name="messaggio"
+              placeholder="Descrivi la tua richiesta..."
+              value={supportData.messaggio}
+              onChange={handleChange}
+              className="w-full h-40 p-3 border border-gray-300 rounded-lg bg-white/90 focus:ring-2 focus:ring-[#23687D] focus:border-transparent outline-none transition resize-none shadow-sm"
+            />
+          </div>
+          <button
+            type="submit"
+            className="w-full p-3 text-white rounded-lg font-medium transition bg-[#23687D] hover:bg-[#1d5565] shadow-md hover:shadow-lg"
+          >
             Invia Richiesta
-          </Button>
+          </button>
         </form>
       </div>
     </div>
   );
 }
-
-// Componenti di supporto
-
-const ContactItem = ({ icon, text }) => (
-  <div className="flex items-center gap-3">
-    <span className="text-primary">{icon}</span>
-    <span>{text}</span>
-  </div>
-);
-
-const Input = ({ name, value, onChange, placeholder, type = "text" }) => (
-  <input
-    type={type}
-    name={name}
-    value={value}
-    onChange={onChange}
-    placeholder={placeholder}
-    className="w-full p-2 border border-gray-300 rounded-xl bg-white/80 focus:ring-2 focus:ring-teal-500 outline-none transition"
-  />
-);
-
-const TextArea = ({ name, value, onChange, placeholder }) => (
-  <textarea
-    name={name}
-    value={value}
-    onChange={onChange}
-    placeholder={placeholder}
-    className="w-full h-40 p-2 border border-gray-300 rounded-xl bg-white/80 focus:ring-2 focus:ring-teal-500 outline-none transition resize-none"
-  />
-);
-
-const Button = ({ children, type = "button", color = "teal" }) => {
-  const colorClass = {
-    teal: "bg-[#23687D] hover:bg-[#1d5565]",
-    green: "bg-green-600 hover:bg-green-700",
-  }[color];
-
-  return (
-    <button
-      type={type}
-      className={`w-full p-2 text-white rounded-xl font-medium transition ${colorClass}`}
-    >
-      {children}
-    </button>
-  );
-};
