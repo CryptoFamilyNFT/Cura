@@ -2,7 +2,7 @@
 import { Avatar, IconButton, useTheme } from "@mui/material";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-import logo from "../../assets/Images/mascotte_2.png";
+import logo from "../../../public/Images/mascotte_2.PNG";
 import { Link, useNavigate } from "react-router";
 import { LogoutOutlined } from "@mui/icons-material";
 import { logout } from "../../redux/User/userSlice";

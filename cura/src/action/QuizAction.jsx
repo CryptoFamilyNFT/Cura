@@ -30,8 +30,8 @@ export function rmQuizFromStorage(topic) {
 
 export const fetchQuizData = async (topic = undefined, saveInStorage = false) => {
 
-    if (localStorage.getItem(topic || "benessere") !== null && saveInStorage === false) {
-        return localStorage.getItem(topic || "benessere");
+    if (localStorage.getItem(topic) !== null && saveInStorage === false) {
+        return localStorage.getItem(topic);
     }
 
 
@@ -44,7 +44,7 @@ export const fetchQuizData = async (topic = undefined, saveInStorage = false) =>
     const parser = await callZodOutputParser();
 
     const prompt = ChatPromptTemplate.fromTemplate(`
-        Create a quiz based on the topic: {topic}.
+        Create a quiz based on the topic and ask how they feeling and what they do: {topic}.
         Format the quiz as: {json_istruction}.
         The quiz should contain 10 questions, each with 4 possible answers.
         You must always return valid JSON fenced by a markdown code block. Do not return any additional text.
@@ -59,7 +59,7 @@ export const fetchQuizData = async (topic = undefined, saveInStorage = false) =>
     });
 
     if (saveInStorage === true) {
-        localStorage.setItem(topic || "benessere", JSON.stringify(result))
+        localStorage.setItem(topic, JSON.stringify(result))
     }
 
     return result;

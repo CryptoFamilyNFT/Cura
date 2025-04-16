@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import ScenaMeditazione from "./ScenaMeditazione";
 import { PlayArrow, Pause, SkipPrevious, SkipNext } from "@mui/icons-material";
-import "./app.css";
 
 export default function AudioPlayerSonno({ tracks }) {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0); //state variable della traccia audio attuale

@@ -1,16 +1,16 @@
 import React from "react";
-import AudioPlayerMindfullness from "../components/AudioPlayerMindfullness";
-import { useNavigate } from "react-router-dom";
+import AudioPlayerMindfullness from "../../components/Components-meditazione/AudioPlayerMindfullness.jsx";
+import { useNavigate } from "react-router";
 
 const tracks = [
   {
-    src: "./Pioggia.mp3",
-    image: "./pioggia.jpg",
+    src: "../../public/mp3/Pioggia.mp3",
+    image: "../../../public/Images/pioggia.jpg",
     title: "Pioggia",
   },
   {
-    src: "./Ruscello.mp3",
-    image: "./ruscello.jpg",
+    src: "../../public/mp3/Ruscello.mp3",
+    image: "../../../public/Images/ruscello.jpg",
     title: "Ruscello",
   },
 
@@ -29,7 +29,7 @@ export default function App() {
           className=" h-fit ml-60 bg-[#205f72] text-white text-2xl py-2 px-6 rounded-lg w-200 transition-colors duration-100 hover:bg-[#A1C877] "
           onClick={() => {
             console.log("Navigating to/");
-            navigate("/");
+            navigate("/Meditazione");
           }}
         >
           Meditazione
