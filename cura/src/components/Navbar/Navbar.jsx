@@ -71,12 +71,12 @@ const Navbar = () => {
                             <div className="flex items-center gap-4">
                                 <Link to="/login">
                                     <button className="bg-[rgba(255,255,255,0.5)] w-30 hover: cursor-pointer hover:bg-gray-100 text-emerald-900 font-medium py-1 px-4 rounded transition-all duration-200">
-                                        Sign In
+                                        Accedi
                                     </button>
                                 </Link>
                                 <Link to="/signup">
                                     <button className="bg-emerald-800 w-30 hover: cursor-pointer hover:bg-emerald-900 text-white font-medium py-1 px-4 rounded transition-all duration-200">
-                                        Sign Up
+                                        Registrati
                                     </button>
                                 </Link>
                             </div>
