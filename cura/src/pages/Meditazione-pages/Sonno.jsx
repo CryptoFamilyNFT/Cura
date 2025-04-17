@@ -2,6 +2,7 @@ import React from "react";
 import AudioPlayerSonno from "../../components/Components-meditazione/AudioPlayerSonno";
 import { useNavigate } from "react-router-dom";
 import ScenaMeditazione from "../../components/Components-meditazione/ScenaMeditazione";
+import sonno from '../../../public/glb/meditazioneSono.gld'
 
 const tracks = [
   {
@@ -24,7 +25,7 @@ export default function Sonno() {
     <div className="flex absolute flex-row w-full h-screen bg-gradient-to-b from-[#205f72] to-[#A1C877] overflow-hidden">
       {/* Colonna sinistra */}
       <div className=" w-1/2 h-screen">
-        <ScenaMeditazione modelPath="https://drive.google.com/uc?export=download&id=1H7rqHKduXVbhoB_u_xBJQGQHf3hRcUKH" />
+        <ScenaMeditazione modelPath={sonno} />
         {/* qui passo modello sonno */}
       </div>
       {/* Colonna sinistra */}

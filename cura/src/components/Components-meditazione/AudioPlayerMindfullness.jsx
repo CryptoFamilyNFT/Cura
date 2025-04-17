@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import ScenaMeditazione from "./ScenaMeditazione";
 import { PlayArrow, Pause, SkipPrevious, SkipNext } from "@mui/icons-material";
+import mind from '../../../public/glb/meditazioneMindfullness.glb'
 
 export default function AudioPlayerMindfullness({ tracks }) {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0); //state variable della traccia audio attuale
@@ -73,7 +74,7 @@ export default function AudioPlayerMindfullness({ tracks }) {
     <div className="flex justify-center items-center h-screen">
       <div>
         {
-          <ScenaMeditazione modelPath="https://drive.google.com/uc?export=download&id=1Ufr7kmWpmm8uWyCkUhNDGTJOxz8UeTeq" />
+          <ScenaMeditazione modelPath={mind} />
         }
       </div>{" "}
       {/* qui passo modello mindfullness */}

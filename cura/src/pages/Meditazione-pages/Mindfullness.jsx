@@ -30,7 +30,6 @@ export default function Mindfullness() {
           onClick={() => {
             console.log("Navigating to/");
             navigate("/Meditazione");
-            navigate("/Meditazione");
           }}
         >
           Meditazione
