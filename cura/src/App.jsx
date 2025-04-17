@@ -14,6 +14,7 @@ import MeditazioneHome from "./pages/Meditazione-pages/MeditazioneHome.jsx";
 import Sonno from "./pages/Meditazione-pages/Sonno.jsx";
 import Mindfullness from "./pages/Meditazione-pages/Mindfullness.jsx";
 import Chatbot from "./components/chatbot/chatbot.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
         <Route path="*" element={<h1>404 Not Found</h1>} />
         <Route path="/Chatbot" element={<Chatbot />} />
       </Routes>
+      <Footer/>
     </>
   );
 }
