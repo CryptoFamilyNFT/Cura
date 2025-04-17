@@ -15,7 +15,10 @@ export default function Sidebar({
   const [activeButton, setActiveButton] = useState("Diario");
   const navigate = useNavigate();
 
-  const [userData, setUserData] = useState(user);
+  const [userData, setUserData] = useState({
+    username: "Mario Rossi",
+    img: "../../../public/Images/mascotte_2.PNG",
+  });
 
   useEffect(() => {
     const fetchedUserData = {

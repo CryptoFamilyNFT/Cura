@@ -4,7 +4,7 @@ const AssistentePersonale = () => {
     return (
         <div className="min-h-screen relative bg-gradient-to-r from-[#23687D] to-[#A1C877] flex flex-col items-center justify-center p-6">
               <img 
-                src="../../../public/astratto-equilibrio-1.png" 
+                src="../../../public/Images/astratto-equilibrio-1.png" 
                 alt="astratto-equilibrio-1" 
                 className="absolute left-0 bottom-0"
             />
