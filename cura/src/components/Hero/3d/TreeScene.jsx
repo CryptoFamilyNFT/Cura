@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
-import masc3d from "../../../assets/glb/curalandingpage.glb";
+import masc3d from "../../../../public/glb/curalandingpage.glb";
 import { Mesh, SpotLight } from "three";
 import { Cloud } from "./Cloud";
 

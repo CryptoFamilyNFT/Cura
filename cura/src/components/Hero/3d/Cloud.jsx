@@ -1,7 +1,7 @@
 import React from "react";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useLoader } from "@react-three/fiber";
-import cloud from "../../../assets/glb/cloud.glb";
+import cloud from "../../../../public/glb/cloud.glb";
 
 export function Cloud(props) {
   const { nodes, materials } = useLoader(GLTFLoader, cloud);
