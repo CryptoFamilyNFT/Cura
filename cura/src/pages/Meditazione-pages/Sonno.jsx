@@ -5,12 +5,12 @@ import ScenaMeditazione from "../../components/Components-meditazione/ScenaMedit
 
 const tracks = [
   {
-    src: "../../public/mp3/Pioggia.mp3",
+    src: "../../assets/mp3/Pioggia.mp3",
     image: "../../../public/Images/pioggia.jpg",
     title: "Pioggia",
   },
   {
-    src: "../../public/mp3/Ruscello.mp3",
+    src: "../../assets/mp3/Ruscello.mp3",
     image: "../../../public/Images/ruscello.jpg",
     title: "Ruscello",
   },
