@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import mascotte from '../../assets/Images/mascotte_2.png';
+import mascotte from '../../../public/Images/mascotte_2.PNG';
 import { ChatCurina } from "../../action/QuizChat";
 
 const Chatbot = () => {
