@@ -17,12 +17,13 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-[#A1C877] py-8">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-start">
-
         {/* Sezione Logo e Descrizione Aziendale */}
         <div className="w-full md:w-1/4 mb-6">
           <div className="flex items-center space-x-2">
             <span className="text-3xl font-bold text-[#A1C877]">CURA</span>
-            <span className="text-sm text-gray-500">Soluzioni innovative per il tuo benessere</span>
+            <span className="text-sm text-gray-500">
+              Soluzioni innovative per il tuo benessere
+            </span>
           </div>
         </div>
 
@@ -30,10 +31,26 @@ export default function Footer() {
         <div className="w-full md:w-1/4 mb-6">
           <h4 className="text-lg font-semibold mb-2">Link utili</h4>
           <ul>
-            <li><Link to="/" className="hover:underline">Home</Link></li>
-            <li><Link to="/About" className="hover:underline">Chi siamo</Link></li>
-            <li><Link to="/Profile" className="hover:underline">Contatti</Link></li>
-            <li><Link to="/Review" className="hover:underline">Lascia una recensione</Link></li>
+            <li>
+              <Link to="/" className="hover:underline">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/About" className="hover:underline">
+                Chi siamo
+              </Link>
+            </li>
+            <li>
+              <Link to="/Profile" className="hover:underline">
+                Contatti
+              </Link>
+            </li>
+            <li>
+              <Link to="/Review" className="hover:underline">
+                Lascia una recensione
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -42,11 +59,21 @@ export default function Footer() {
           <h4 className="text-lg font-semibold mb-2">Contatti</h4>
           <p className="flex items-center gap-2">
             <FaEnvelope />
-            <a href="mailto:info@cura.com" className="hover:underline text-blue-300">info@cura.com</a>
+            <a
+              href="mailto:info@cura.com"
+              className="hover:underline text-blue-300"
+            >
+              info@cura.com
+            </a>
           </p>
           <p className="flex items-center gap-2 mt-2">
             <FaPhoneAlt />
-            <a href="tel:+391234567890" className="hover:underline text-blue-300">+39 123 456 7890</a>
+            <a
+              href="tel:+391234567890"
+              className="hover:underline text-blue-300"
+            >
+              +39 123 456 7890
+            </a>
           </p>
         </div>
 
@@ -100,8 +127,9 @@ export default function Footer() {
       </button>
 
       {/* Footer base © info */}
-      <div className="text-xs text-gray-600 text-center mt-8">
-        © {new Date().getFullYear()} CURA — Ultimo aggiornamento: Aprile {new Date().getFullYear()}
+      <div className="text-xs text-gray-600 text-center">
+        © {new Date().getFullYear()} CURA — Ultimo aggiornamento: Aprile{" "}
+        {new Date().getFullYear()}
       </div>
 
       {/* Tema */}
@@ -113,6 +141,5 @@ export default function Footer() {
     </footer>
   );
 }
-
 
 //* npm install react-icons

@@ -14,19 +14,18 @@ import MeditazioneHome from "./pages/Meditazione-pages/MeditazioneHome.jsx";
 import Sonno from "./pages/Meditazione-pages/Sonno.jsx";
 import Mindfullness from "./pages/Meditazione-pages/Mindfullness.jsx";
 import Chatbot from "./components/chatbot/chatbot.jsx";
-import Footer from "./components/Footer/Footer.jsx";
+import AppLayout from "./components/Layout/AppLayout";
 
 function App() {
   return (
-    <>
-      <Navbar />
+    <AppLayout>
       <Routes>
+        <Route path="/" element={<Hero />} />
         <Route path="/Meditazione" element={<MeditazioneHome />} />
         <Route path="/Meditazione/mindfullness" element={<Mindfullness />} />
         <Route path="/Meditazione/sonno" element={<Sonno />} />
         <Route path="/Quiz" element={<SezioneQuiz />} />
         <Route path="/Team" element={<TeamPage />} />
-        <Route path="/" element={<Hero />} />
         <Route path="/QuizPage" element={<QuizPage />} />
         <Route path="/Login" element={<SignIn />} />
         <Route path="/Profile" element={<ProfilePage />} />
@@ -35,11 +34,13 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/About" element={<TeamPage />} />
         <Route path="/Menu" element={<MainSection />} />
-        <Route path="*" element={<h1>404 Not Found</h1>} />
         <Route path="/Chatbot" element={<Chatbot />} />
+        <Route
+          path="*"
+          element={<h1 className="text-center mt-10">404 Not Found</h1>}
+        />
       </Routes>
-      <Footer />
-    </>
+    </AppLayout>
   );
 }
 
