@@ -10,7 +10,6 @@ const QuizPage = () => {
     const [showFeedback, setShowFeedback] = useState(false);
     const [feedbackContent, setFeedbackContent] = useState(null);
     const currentQuiz = dataRes.quizs[currentQuestionIndex];
-    const { quizTitle } = useParams();
 
     useEffect(() => {
         (async () => {
@@ -24,7 +23,7 @@ const QuizPage = () => {
     }, []);
 
 
-ù
+
 
     const handleOptionChange = (quizId, answer) => {
         setAnswers((prev) => {

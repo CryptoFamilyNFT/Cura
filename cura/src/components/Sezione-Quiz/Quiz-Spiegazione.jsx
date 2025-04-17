@@ -1,4 +1,4 @@
-import cloud from "../../assets/glb/cloud.glb";
+import cloud from "../../../public/Images/cloud2.png";
 
 export default function SpiegazioneQuiz() {
   return (
