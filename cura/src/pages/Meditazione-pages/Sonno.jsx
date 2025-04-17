@@ -2,7 +2,7 @@ import React from "react";
 import AudioPlayerSonno from "../../components/Components-meditazione/AudioPlayerSonno";
 import { useNavigate } from "react-router-dom";
 import ScenaMeditazione from "../../components/Components-meditazione/ScenaMeditazione";
-import sonno from '../../../public/glb/meditazioneSono.gld'
+import sonno from '../../../public/glb/meditazioneSonno.glb'
 
 const tracks = [
   {
@@ -34,7 +34,6 @@ export default function Sonno() {
           className="w-full absolute bottom-20 left-1/3 max-w-[200px] bg-[#205f72] text-white text-2xl py-2 px-6 rounded-lg transition-colors duration-100 hover:bg-[#A1C877]"
           onClick={() => {
             console.log("Navigating to/");
-            navigate("/Meditazione");
             navigate("/Meditazione");
           }}
         >
