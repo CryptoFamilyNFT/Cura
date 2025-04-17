@@ -47,7 +47,6 @@ body {
 .Quiz-list .quiz:hover .thumb {
   transition: ease-in-out 0.5s;
   transform: rotate(4deg);
-  border-width: 7px;
   img {
     filter: grayscale(0%);
   }
@@ -55,7 +54,6 @@ body {
 .Quiz-list .quiz:nth-of-type(even):hover .thumb {
   transition: 0.5s;
   transform: rotate(4deg);
-  border-width: 7px;
   img {
     filter: grayscale(0%);
   }

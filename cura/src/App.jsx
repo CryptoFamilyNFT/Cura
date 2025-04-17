@@ -9,11 +9,6 @@ import { SignIn } from "./components/Mutation/SignIn"
 import HomeReview from "./components/Review/HomeReview"
 import QuizPage from "./pages/QuizPage";
 import FeedbackPage from "./pages/FeedbackPage";
-import QuizPage from "./pages/QuizPage.jsx"
-import QuizPage from "./pages/QuizPage.jsx"
-import MeditazioneHome from "./pages/Meditazione-pages/MeditazioneHome.jsx";
-import Mindfullness from "./pages/Meditazione-pages/Mindfullness.jsx"
-import Sonno from "./pages/Meditazione-pages/Sonno.jsx"
 import MainSection from "./pages/home-page/MainSection.jsx"
 import MeditazioneHome from "./pages/Meditazione-pages/MeditazioneHome.jsx";
 import Sonno from "./pages/Meditazione-pages/Sonno.jsx";

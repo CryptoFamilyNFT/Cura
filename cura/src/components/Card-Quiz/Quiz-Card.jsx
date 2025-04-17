@@ -1,19 +1,20 @@
 import { useNavigate } from "react-router"
+import mascotte from '../../../public/Images/mascotte_2.PNG';
 
-export default function QuizCard({ emoji, par: quiz, desc}){
+export default function QuizCard({ par: quiz, desc}){
 
     const navigate = useNavigate()
 
     function setQuiz(quizName){
         const quizMin = quizName.toLowerCase().replace(/\s+/g, '-');
         localStorage.setItem("Quiz", quizName);
-        navigate(`/Quiz/${quizMin}`);        
+        navigate(`/QuizPage`);        
     }
 
   return(
       <div className=" w-auto h-auto m-10 p-3 bg-white/30 rounded-2xl quiz ">
           <div className=" float-left w-30 -rotate-4 -ml-20 thumb ">
-              <img src={emoji} alt="" className=" grayscale-100" />
+              <img src={mascotte} alt="" className=" grayscale-100" />
           </div>
           <div className="quiz-description">
               <h3 className=" inline absolute  text-2xl rounded-xl bg-[#A1C877] text-[#F4F7E1] p-0.5 pl-3 pr-3 -mt-9 quiz-title ">{quiz}</h3>
