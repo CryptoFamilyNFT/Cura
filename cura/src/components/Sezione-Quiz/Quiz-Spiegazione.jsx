@@ -1,8 +1,8 @@
-import cloud from "../../../public/Images/cloud2.png";
+import cloud from "../../assets/glb/cloud.glb";
 
 export default function SpiegazioneQuiz() {
   return (
-    <div className=" bg-[#DBE59E] h-screen p-3 ">
+    <div className=" bg-[#DBE59E] h-screen p-3 rounded-2xl">
       <div className=" absolute flex flex-col space-y-30 p-10 thumb-cloud ">
         <div>
           <img src={cloud} className=" h-15" />
