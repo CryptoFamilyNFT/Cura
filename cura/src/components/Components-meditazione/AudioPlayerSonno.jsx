@@ -71,11 +71,7 @@ export default function AudioPlayerSonno({ tracks }) {
 
   return (
     <div className="flex justify-start items-start mt-20 max-h-screen w-fit">
-      <div className="flex justify-start items-start">
-        {
-          <ScenaMeditazione modelPath="https://drive.google.com/uc?export=download&id=1txevq5Q4TDAK9IN0YMbRewRzOIs0lzO8" />
-        }
-      </div>{" "}
+      
       {/* qui passo la scena meditazione sonno  */}
       <div className="w-1/3 flex-col">
         <div className="p-6 bg-[#c7c7c7] bg-opacity-80 backdrop-blur-md rounded-lg w-150 text-white">

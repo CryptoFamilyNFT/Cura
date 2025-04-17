@@ -5,9 +5,9 @@ export default function QuizCard({ emoji, par: quiz, desc}){
     const navigate = useNavigate()
 
     function setQuiz(quizName){
-        const quizMin = quizName.toLowerCase().replace(/\s+/g, '-');
+        // const quizMin = quizName.toLowerCase().replace(/\s+/g, '-');
         localStorage.setItem("Quiz", quizName);
-        navigate(`/Quiz/${quizMin}`);        
+        navigate(`/QuizPage`);        
     }
 
   return(

@@ -84,7 +84,7 @@ function ClickHandler() {
 
 export default function MainSection() {
   return (
-    <div>
+    <div className="bg-[#A1C877] ">
       {/* Crea il canvas 3D con telecamera iniziale */}
       <Canvas
         camera={{ position: [0, 0, 8], fov: 40 }}
