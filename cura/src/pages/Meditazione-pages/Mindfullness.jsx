@@ -4,12 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 const tracks = [
   {
-    src: "../../public/mp3/Pioggia.mp3",
+    src: "../../../public/mp3/Pioggia.mp3",
     image: "../../../public/Images/pioggia.jpg",
     title: "Pioggia",
   },
   {
-    src: "../../public/mp3/Ruscello.mp3",
+    src: "../../../public/mp3/Ruscello.mp3",
     image: "../../../public/Images/ruscello.jpg",
     title: "Ruscello",
   },
@@ -29,6 +29,7 @@ export default function Mindfullness() {
           className="w-full absolute bottom-20 left-1/4 max-w-[200px] bg-[#205f72] text-white text-2xl py-2 px-6 rounded-lg transition-colors duration-100 hover:bg-[#A1C877]"
           onClick={() => {
             console.log("Navigating to/");
+            navigate("/Meditazione");
             navigate("/Meditazione");
           }}
         >

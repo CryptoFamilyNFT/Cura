@@ -31,7 +31,7 @@ function Planet() {
     if (Mascotte)
       Mascotte.userData = {
         onClick: () => {
-          navigate("/chat");
+          navigate("/ChatBot");
         },
       };
 
@@ -84,7 +84,7 @@ function ClickHandler() {
 
 export default function MainSection() {
   return (
-    <div className="bg-[#A1C877] ">
+    <div className="bg-[#A1C877]">
       {/* Crea il canvas 3D con telecamera iniziale */}
       <Canvas
         camera={{ position: [0, 0, 8], fov: 40 }}

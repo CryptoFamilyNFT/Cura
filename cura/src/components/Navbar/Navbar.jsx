@@ -15,21 +15,13 @@ const menuButton = [
         link: '/'
     },
     {
-        title: 'Quiz',
-        link: '/quiz'
+        title: 'Menu',
+        link: '/Menu'
     },
     {
-        title: 'Team',
-        link: '/team'
-    },
-    {
-        title: 'Meditazione',
-        link: '/meditazione'
-    },
-    {
-        title: 'Chatbot',
-        link: '/chatbot'
-    },
+        title: 'About',
+        link: '/Team'
+    }
 ]
 
 const Navbar = () => {
