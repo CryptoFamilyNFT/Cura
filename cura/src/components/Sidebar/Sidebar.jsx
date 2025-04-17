@@ -9,7 +9,7 @@ export default function Sidebar({
   setPageContent,
   user = {
     username: "Mario Rossi",
-    img: "../../../public/Images/mascotte_2.PNG",
+    img: '../public/mascotte_2.PNG',
   },
 }) {
   const [activeButton, setActiveButton] = useState("Diario");
@@ -28,7 +28,7 @@ export default function Sidebar({
 
     setUserData({
       username: fetchedUserData.username,
-      img: fetchedUserData.img || "../../../public/Images/mascotte_2.PNG",
+      img: fetchedUserData.img || "../public/Images/mascotte_2.PNG",
     });
   }, []);
 
