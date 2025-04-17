@@ -5,7 +5,7 @@ import { OrbitControls, Environment, useGLTF } from "@react-three/drei"; // Drei
 import { useNavigate } from "react-router"; // useNavigate per navigare tra le pagine
 
 function Planet() {
-  const gltf = useGLTF("../../../public/Images/pianeta.glb"); // Carica il modello 3D dal file .glb
+  const gltf = useGLTF("../../../public/glb/pianeta.glb"); // Carica il modello 3D dal file .glb
   const planet = gltf.scene; // Accede alla scena del modello caricato
   const navigate = useNavigate(); // Hook per cambiare pagina al click
 

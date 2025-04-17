@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Canvas, useLoader } from "@react-three/fiber";
-import masc3d from "../../assets/glb/mascotte.glb";
+import masc3d from "../../../public/glb/mascotte.glb";
 
 export function MascotteSign(props) {
   const { scene, materials } = useLoader(GLTFLoader, masc3d);
